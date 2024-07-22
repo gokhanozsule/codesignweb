@@ -3,7 +3,7 @@ import { useGLTF, useAnimations } from '@react-three/drei'
 
 export function Torus(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/models/Torus.glb')
+  const { nodes, materials, animations } = useGLTF(import.meta.env.VITE_BASE_URL + 'models/Torus.glb')
   const { actions } = useAnimations(animations, group)
 
   useEffect(() => {
@@ -892,5 +892,5 @@ export function Torus(props) {
   )
 }
 
-useGLTF.preload('/models/Torus.glb')
+useGLTF.preload(import.meta.env.VITE_BASE_URL + 'models/Torus.glb')
 

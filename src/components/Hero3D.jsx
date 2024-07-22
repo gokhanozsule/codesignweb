@@ -44,7 +44,7 @@ export function Hero3D(props) {
     group.current.children[27].children[1].rotation.y += delta;
   })
 
-  const { nodes, materials } = useMemo(() => useGLTF('/models/Hero3D.glb'))
+  const { nodes, materials } = useMemo(() => useGLTF(import.meta.env.VITE_BASE_URL + 'models/Hero3D.glb'))
   return (
     <>
     <group ref={group} {...props} dispose={null}>
@@ -2212,4 +2212,4 @@ export function Hero3D(props) {
   )
 }
 
-useGLTF.preload('/models/Hero3D.glb')
+useGLTF.preload(import.meta.env.VITE_BASE_URL + 'models/Hero3D.glb')

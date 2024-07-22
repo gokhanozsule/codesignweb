@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Sphere01(props) {
-  const { nodes, materials } = useGLTF('/models/Sphere.glb')
+  const { nodes, materials } = useGLTF(import.meta.env.VITE_BASE_URL + 'models/Sphere.glb')
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -117,4 +117,4 @@ export function Sphere01(props) {
   )
 }
 
-useGLTF.preload('/models/Sphere.glb')
+useGLTF.preload(import.meta.env.VITE_BASE_URL + 'models/Sphere.glb')

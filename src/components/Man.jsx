@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei'
 
 export function Man(props) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/models/Man.glb')
+  const { nodes, materials } = useGLTF(import.meta.env.VITE_BASE_URL + 'models/Man.glb')
 
     return (
     <group ref={group} {...props} dispose={null}>
@@ -20,4 +20,4 @@ export function Man(props) {
   )
 }
 
-useGLTF.preload('/models/Man.glb')
+useGLTF.preload(import.meta.env.VITE_BASE_URL + 'models/Man.glb')

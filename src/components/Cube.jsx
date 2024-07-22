@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei'
 
 export function Cube01(props) {
 
-  const modelPath = process.env.PUBLIC_URL + '/models/Cube.glb';
+  const modelPath = import.meta.env.VITE_BASE_URL + 'models/Cube.glb';
   const { nodes, materials } = useGLTF(modelPath) 
   return (
     <group {...props} dispose={null}>
@@ -19,4 +19,4 @@ export function Cube01(props) {
   )
 }
 
-useGLTF.preload('/models/Cube.glb')
+useGLTF.preload(import.meta.env.VITE_BASE_URL + 'models/Cube.glb')

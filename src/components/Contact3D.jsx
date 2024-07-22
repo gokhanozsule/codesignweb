@@ -7,7 +7,7 @@ import bg from '../images/07.png'
 import logo from "../assets/Codesign_Logo_Inv.png"
 
 export function Contact3D(props) {
-  const { nodes, materials } = useGLTF('/models/Contact3D.glb')
+  const { nodes, materials } = useGLTF(import.meta.env.VITE_BASE_URL + 'models/Contact3D.glb')
   const colorHex = ["#212226","#54532D","#5E4035", "#242F45"];
   const group = useRef()
 
@@ -379,4 +379,4 @@ export function Contact3D(props) {
   )
 }
 
-useGLTF.preload('/models/Contact3D.glb')
+useGLTF.preload(import.meta.env.VITE_BASE_URL + 'models/Contact3D.glb')
