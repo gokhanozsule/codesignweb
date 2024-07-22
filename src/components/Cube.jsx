@@ -3,8 +3,8 @@ import { useGLTF } from '@react-three/drei'
 
 export function Cube01(props) {
 
-  const modelPath = import.meta.env.VITE_BASE_URL + 'models/Cube.glb';
-  const { nodes, materials } = useGLTF(modelPath) 
+  
+  const { nodes, materials } = useGLTF(`${basePath}models/Cube.glb`) 
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -18,5 +18,5 @@ export function Cube01(props) {
     </group>
   )
 }
-
-useGLTF.preload(import.meta.env.VITE_BASE_URL + 'models/Cube.glb')
+const basePath = import.meta.env.VITE_BASE_URL === '/codesignweb/' ? '' : import.meta.env.VITE_BASE_URL;
+useGLTF.preload(`${basePath}models/Cube.glb`)

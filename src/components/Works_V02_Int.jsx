@@ -17,7 +17,7 @@ const Works_V02_Int = () => {
       <div className="w-full h-full bg-black rounded-3xl opacity-55 absolute left-0 right-0 z-10">
         <div className='absolute text-white z-50 left-[2.5%] bottom-[80%]'>Year</div>
         <div className='absolute text-white z-50 left-[2.5%] bottom-[75%]'>2022</div>
-        <Link to="/codesignweb/Works/V02"><div className='absolute text-white z-50 right-[8%] bottom-[78%] p-1 w-28
+        <Link to="/Works/V02"><div className='absolute text-white z-50 right-[8%] bottom-[78%] p-1 w-28
                         border border-white rounded-2xl hover:bg-neutral-600 hover:cursor-pointer '>
             Exteriors
         </div>

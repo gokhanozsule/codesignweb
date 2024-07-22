@@ -19,12 +19,12 @@ const Works_V01 = () => {
         <div className='absolute text-white z-50 left-[2.5%] bottom-[75%]'>2023</div>
         <div className='absolute text-white z-50 left-[14%] bottom-[80%]'>375 sqm</div>
         <div className='absolute text-white z-50 right-[8%] bottom-[78%] lg:bottom-[70%] p-1 flex flex-row lg:flex-col w-[250-px] gap-2'>
-          <Link to="/codesignweb/Works/V01/Interiors"><div className=' text-white z-50 right-[8%] bottom-[78%] p-1 w-28
+          <Link to="/Works/V01/Interiors"><div className=' text-white z-50 right-[8%] bottom-[78%] p-1 w-28
                           border border-white rounded-2xl hover:bg-neutral-600 hover:cursor-pointer '>
               Interiors
           </div>
           </Link>
-          <Link to="/codesignweb/Works/V01/3D"><div className=' text-white z-50 right-[30%] lg:right-[16%] bottom-[78%] p-1 w-28
+          <Link to="/Works/V01/3D"><div className=' text-white z-50 right-[30%] lg:right-[16%] bottom-[78%] p-1 w-28
                           border border-white rounded-2xl hover:bg-neutral-600 hover:cursor-pointer '>
             3D Partial
           </div>

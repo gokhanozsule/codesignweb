@@ -23,13 +23,13 @@ const Works = () => {
           <div className='w-full flex h-full'>
             <div className='w-1/2 h-1/2 '>
               <div className='flex flex-col h-full justify-center items-center text-center w-full border rounded-3xl border-white'>
-                <ProjectCard to={'/codesignweb/Works/MixedUse'} text={"MIXED USE DEVELOPMENT"} src={render01} />
+                <ProjectCard to={'/Works/MixedUse'} text={"MIXED USE DEVELOPMENT"} src={render01} />
                 <div className='text-white'>
                 2022 
                 </div>
               </div>
               <div className='flex flex-col h-full justify-center items-center text-center w-full border rounded-3xl border-white'>
-              <ProjectCard to={'/codesignweb/Works/V01'} text={"PRIVATE VILLA"} src={render02}/>
+              <ProjectCard to={'/Works/V01'} text={"PRIVATE VILLA"} src={render02}/>
                 <div className='text-white'>
                   2024
                 </div>
@@ -37,13 +37,13 @@ const Works = () => {
             </div>
             <div className='w-1/2 h-1/2 '>
               <div className='flex flex-col h-full justify-center items-center text-center w-full border rounded-3xl border-white'>
-                <ProjectCard to={'/codesignweb/Works/V02'} text={"VILLA 02"} src={render03} />
+                <ProjectCard to={'/Works/V02'} text={"VILLA 02"} src={render03} />
                 <div className='text-white'>
                 2023
                 </div>
               </div>
               <div className='flex flex-col h-full justify-center items-center text-center w-full border rounded-3xl border-white'>
-              <ProjectCard to={'/codesignweb/Works/Carport'} text={"CARPORT"} src={render04}/>
+              <ProjectCard to={'/Works/Carport'} text={"CARPORT"} src={render04}/>
                 <div className='text-white'>
                 2023
                 </div>

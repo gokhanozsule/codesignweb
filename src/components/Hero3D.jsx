@@ -44,7 +44,8 @@ export function Hero3D(props) {
     group.current.children[27].children[1].rotation.y += delta;
   })
 
-  const { nodes, materials } = useMemo(() => useGLTF(import.meta.env.VITE_BASE_URL + 'models/Hero3D.glb'))
+  const basePath = import.meta.env.VITE_BASE_URL === '/codesignweb/' ? '' : import.meta.env.VITE_BASE_URL;
+  const { nodes, materials } = useMemo(() => useGLTF(`${basePath}models/Hero3D.glb`))
   return (
     <>
     <group ref={group} {...props} dispose={null}>
@@ -1018,13 +1019,13 @@ export function Hero3D(props) {
               <div className='w-full flex h-full'>
                 <div className='w-1/2 h-1/2 '>
                   <div className='flex flex-col h-full justify-center items-center text-center w-full border rounded-3xl border-white'>
-                    <ProjectCard to={'/codesignweb/Works/MixedUse'} text={"MIXED USE DEVELOPMENT"} src={render01} />
+                    <ProjectCard to={'/Works/MixedUse'} text={"MIXED USE DEVELOPMENT"} src={render01} />
                     <div className='text-white'>
                     2022 
                     </div>
                   </div>
                   <div className='flex flex-col h-full justify-center items-center text-center w-full border rounded-3xl border-white'>
-                  <ProjectCard to={'/codesignweb/Works/V01'} text={"PRIVATE VILLA"} src={render02}/>
+                  <ProjectCard to={'/Works/V01'} text={"PRIVATE VILLA"} src={render02}/>
                     <div className='text-white'>
                       2024
                     </div>
@@ -1032,13 +1033,13 @@ export function Hero3D(props) {
                 </div>
                 <div className='w-1/2 h-1/2 '>
                   <div className='flex flex-col h-full justify-center items-center text-center w-full border rounded-3xl border-white'>
-                    <ProjectCard to={'/codesignweb/Works/V02'} text={"VILLA 02"} src={render03} />
+                    <ProjectCard to={'/Works/V02'} text={"VILLA 02"} src={render03} />
                     <div className='text-white'>
                     2023
                     </div>
                   </div>
                   <div className='flex flex-col h-full justify-center items-center text-center w-full border rounded-3xl border-white'>
-                  <ProjectCard to={'/codesignweb/Works/Carport'} text={"CARPORT"} src={render04}/>
+                  <ProjectCard to={'/Works/Carport'} text={"CARPORT"} src={render04}/>
                     <div className='text-white'>
                     2023
                     </div>
@@ -2211,5 +2212,5 @@ export function Hero3D(props) {
     </>
   )
 }
-
-useGLTF.preload(import.meta.env.VITE_BASE_URL + 'models/Hero3D.glb')
+const basePath = import.meta.env.VITE_BASE_URL === '/codesignweb/' ? '' : import.meta.env.VITE_BASE_URL;
+useGLTF.preload(`${basePath}models/Hero3D.glb`)

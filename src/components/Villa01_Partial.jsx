@@ -2,7 +2,8 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Villa01_Partial(props) {
-  const { nodes, materials } = useGLTF(import.meta.env.VITE_BASE_URL + 'models/Villa01_Partial.glb')
+  const basePath = import.meta.env.VITE_BASE_URL === '/codesignweb/' ? '' : import.meta.env.VITE_BASE_URL;
+  const { nodes, materials } = useGLTF(`${basePath}models/Villa01_Partial.glb`)
   return (
     <group {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, Math.PI / 2]} scale={[0.079, 0.08, 0.08]}>
@@ -474,5 +475,5 @@ export function Villa01_Partial(props) {
     </group>
   )
 }
-
-useGLTF.preload(import.meta.env.VITE_BASE_URL + 'models/Villa01_Partial.glb')
+const basePath = import.meta.env.VITE_BASE_URL === '/codesignweb/' ? '' : import.meta.env.VITE_BASE_URL;
+useGLTF.preload(`${basePath}models/Villa01_Partial.glb`)

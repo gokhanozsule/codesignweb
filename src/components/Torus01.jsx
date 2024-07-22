@@ -6,7 +6,8 @@ import { useFrame } from '@react-three/fiber'
 
 export function Torus01(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF(import.meta.env.VITE_BASE_URL +'models/Torus01.glb')
+  const basePath = import.meta.env.VITE_BASE_URL === '/codesignweb/' ? '' : import.meta.env.VITE_BASE_URL;
+  const { nodes, materials, animations } = useGLTF(`${basePath}models/Torus01.glb`)
   const { actions } = useAnimations(animations, group)
 
   useEffect(() => {
@@ -1041,5 +1042,5 @@ export function Torus01(props) {
     </group>
   )
 }
-
-useGLTF.preload(import.meta.env.VITE_BASE_URL +'models/Torus01.glb')
+const basePath = import.meta.env.VITE_BASE_URL === '/codesignweb/' ? '' : import.meta.env.VITE_BASE_URL;
+useGLTF.preload(`${basePath}models/Torus01.glb`)

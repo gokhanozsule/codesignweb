@@ -34,7 +34,7 @@ export const Villa01_3D = () => {
             </Canvas>
         </div>
         <div className='absolute bottom-0 w-full h-10 border border-white bg-[#f7f7f5] flex justify-center items-center rounded-3xl z-30 custom-shadow'>
-            <Link to="/codesignweb/Works/V01">
+            <Link to="/Works/V01">
                 <div className='flex p-1 w-28 justify-center
                                 border border-white rounded-2xl hover:bg-neutral-300 hover:cursor-pointer '>
             Back

@@ -3,7 +3,8 @@ import { useGLTF } from '@react-three/drei'
 
 export function Man(props) {
   const group = useRef()
-  const { nodes, materials } = useGLTF(import.meta.env.VITE_BASE_URL + 'models/Man.glb')
+  const basePath = import.meta.env.VITE_BASE_URL === '/codesignweb/' ? '' : import.meta.env.VITE_BASE_URL;
+  const { nodes, materials } = useGLTF(`${basePath}models/Man.glb`)
 
     return (
     <group ref={group} {...props} dispose={null}>
@@ -19,5 +20,5 @@ export function Man(props) {
     </group>
   )
 }
-
-useGLTF.preload(import.meta.env.VITE_BASE_URL + 'models/Man.glb')
+const basePath = import.meta.env.VITE_BASE_URL === '/codesignweb/' ? '' : import.meta.env.VITE_BASE_URL;
+useGLTF.preload(`${basePath}models/Man.glb`)

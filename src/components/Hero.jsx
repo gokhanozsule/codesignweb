@@ -20,10 +20,10 @@ const Hero = () => {
           <div className='w-full h-full flex flex-col sm:flex-row rounded-3xl justify-center items-center border border-white'>
             <div className='w-full sm:w-1/2 h-full flex flex-row sm:flex-col justify-center items-start mt-20 sm:mt-0 sm:items-center gap-10 rounded-3xl'>
                 <div className='w-[90%] flex items-center justify-center'>
-                <ProjectCard to={'/codesignweb/Works/MixedUse'} text={"MIXED USE DEVELOPMENT"} src={render01} />
+                <ProjectCard to={'/Works/MixedUse'} text={"MIXED USE DEVELOPMENT"} src={render01} />
                 </div>
                 <div className='w-[90%] flex items-center justify-center'>
-                <ProjectCard to={'/codesignweb/Works/V01'} text={"PRIVATE VILLA"} src={render02}/>
+                <ProjectCard to={'/Works/V01'} text={"PRIVATE VILLA"} src={render02}/>
                 </div>
 
             </div>
