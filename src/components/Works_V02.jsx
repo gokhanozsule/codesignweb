@@ -18,7 +18,7 @@ const Works_V02 = () => {
         <div className='absolute text-white z-50 left-[2.5%] bottom-[80%]'>Year</div>
         <div className='absolute text-white z-50 left-[2.5%] bottom-[75%]'>2023</div>
         <div className='absolute text-white z-50 left-[14%] bottom-[80%]'>150 sqm</div>
-        <Link to="/Works/V02/Interiors"><div className='absolute text-white z-50 right-[8%] bottom-[78%] p-1 w-28
+        <Link to="/codesignweb/Works/V02/Interiors"><div className='absolute text-white z-50 right-[8%] bottom-[78%] p-1 w-28
                         border border-white rounded-2xl hover:bg-neutral-600 hover:cursor-pointer '>
             Interiors
         </div>
