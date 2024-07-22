@@ -2,7 +2,9 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Cube01(props) {
-  const { nodes, materials } = useGLTF('/models/Cube.glb')
+
+  const modelPath = process.env.PUBLIC_URL + '/models/Cube.glb';
+  const { nodes, materials } = useGLTF(modelPath) 
   return (
     <group {...props} dispose={null}>
       <mesh
