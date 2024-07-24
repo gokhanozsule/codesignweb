@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Navbar from './Navbar'
 import FooterWorks from './FooterWorks'
 import bg from '../images/08.png'
-import { Link } from 'react-router-dom'
 import { Carousel07 } from './Carousel07'
 
 const Works_Carport = () => {

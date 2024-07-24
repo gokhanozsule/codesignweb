@@ -40,14 +40,14 @@ function App() {
             <Route path='/' element={<Hero/>} ></Route>
             <Route path='/Welcome' element={<Welcome/>} ></Route>
             <Route path='/Works' element={<Works/>} ></Route>
-            <Route path='/Works/MixedUse' element={<Works_Mix/>} ></Route>
-            <Route path='/Works/MixedUse/Interiors' element={<Works_Mix_Int/>} ></Route>
-            <Route path='/Works/V01' element={<Works_V01/>} ></Route>
-            <Route path='/Works/V01/Interiors' element={<Works_V01_Int/>} ></Route>
-            <Route path='/Works/V01/3D' element={<Villa01_3D/>} ></Route>
-            <Route path='/Works/V02' element={<Works_V02/>} ></Route>
-            <Route path='/Works/V02/Interiors' element={<Works_V02_Int/>} ></Route>
-            <Route path='/Works/Carport' element={<Works_Carport/>} ></Route>
+            <Route path='/MixedUse' element={<Works_Mix/>} ></Route>
+            <Route path='/MixedUseInteriors' element={<Works_Mix_Int/>} ></Route>
+            <Route path='/V01' element={<Works_V01/>} ></Route>
+            <Route path='/V01Interiors' element={<Works_V01_Int/>} ></Route>
+            <Route path='/V013D' element={<Villa01_3D/>} ></Route>
+            <Route path='/V02' element={<Works_V02/>} ></Route>
+            <Route path='/V02Interiors' element={<Works_V02_Int/>} ></Route>
+            <Route path='/Carport' element={<Works_Carport/>} ></Route>
             <Route path='/About' element={<About/>} ></Route>
             <Route path='/Contact' element={<Contact/>} ></Route>
           </Routes>

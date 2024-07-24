@@ -99,10 +99,10 @@ export function Contact3D(props) {
         </mesh>
         { hoveredIco && 
         <Html as='div' fullscreen className='flex flex-col justify-end mt-[-560px] items-center rounded-3xl cursor-default select-none' >
-          <div className='h-[10%] rounded-3xl z-20 border mb-16 bg-cover bg-center w-[95%] flex flex-col  relative '
+          <div className='h-[10%] rounded-full z-20 border mb-16 bg-cover bg-center w-[95%] flex flex-col  relative '
               style={{backgroundImage : `url(${bg})`}}
           >
-            <div className="w-full h-full z-20 bg-black opacity-75 absolute rounded-3xl left-0 right-0"></div>
+            <div className="w-full h-full z-20 bg-black opacity-75 absolute rounded-full left-0 right-0"></div>
             <div className='flex h-full w-full flex-col text-white z-30'>
               <button className=' border rounded-full w-6 h-6 flex justify-center items-center ml-4 mt-4 hover:bg-slate-400 text-white z-30'
                       onClick={() => setHoveredIco(false)}
