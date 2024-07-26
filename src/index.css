@@ -1,23 +1,21 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .custom-shadow {
-  box-shadow: -20px 24px 28px 0px rgba(0,0,0,0.2);
+  box-shadow: -20px 24px 28px 0px rgba(0, 0, 0, 0.2);
 }
 
 @font-face {
   font-family: Ubuntu;
-  src: url(../public/fonts/Ubuntu-Regular.ttf);
+  src: url(/fonts/Ubuntu-Regular.ttf);
 }
 
-html{
+html {
   font-family: Ubuntu;
 }
 
 .loading {
-  
   height: 350px;
   width: 350px;
   animation: draw 5s ease;
@@ -37,7 +35,6 @@ html{
 .landing {
   animation: land 6s ease;
   opacity: 0;
-  
 }
 
 @keyframes land {

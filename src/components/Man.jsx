@@ -1,12 +1,11 @@
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export function Man(props) {
-  const group = useRef()
-  const basePath = import.meta.env.VITE_BASE_URL === '/codesignweb/' ? '' : import.meta.env.VITE_BASE_URL;
-  const { nodes, materials } = useGLTF(`${basePath}models/Man.glb`)
+  const group = useRef();
+  const { nodes, materials } = useGLTF(`/models/Man.glb`);
 
-    return (
+  return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
         <mesh
@@ -14,11 +13,10 @@ export function Man(props) {
           castShadow
           receiveShadow
           geometry={nodes.Low_poly_man_wearing_suit.geometry}
-        > 
-        </mesh>
+        ></mesh>
       </group>
     </group>
-  )
+  );
 }
-const basePath = import.meta.env.VITE_BASE_URL === '/codesignweb/' ? '' : import.meta.env.VITE_BASE_URL;
-useGLTF.preload(`${basePath}models/Man.glb`)
+
+useGLTF.preload(`/models/Man.glb`);
