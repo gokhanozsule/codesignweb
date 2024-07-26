@@ -2,10 +2,13 @@ import React from "react";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Man } from "./Man";
-import * as images from "../imageTable";
 
 const About = () => {
-  const { AboutImages } = images;
+  const AboutImages = {
+    Joali: "jb-arrival-jetty_cm8ri2",
+    Emaar: "emaar-square-mall_cihdim",
+    bg: "06_qcvmdm",
+  };
   return (
     <>
       <div
