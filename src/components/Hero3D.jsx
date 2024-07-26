@@ -12,8 +12,7 @@ import logo from "../assets/images/Codesign_Logo_Inv 1.svg";
 import { Man } from "./Man";
 import ProjectCard from "./ProjectCard";
 
-export function Hero3D({ cloudinaryUrl, ...props}) {
-
+export function Hero3D({ cloudinaryUrl, ...props }) {
   const bg = `${cloudinaryUrl}/08_ujpych`;
   const bg01 = `${cloudinaryUrl}/06_qcvmdm`;
   const render01 = `${cloudinaryUrl}/01AnaPerspektif_binjqw`;
@@ -1182,37 +1181,52 @@ export function Hero3D({ cloudinaryUrl, ...props}) {
                 <div className="w-full flex h-full">
                   <div className="w-1/2 h-1/2 ">
                     <div className="flex flex-col h-full justify-center items-center text-center w-full border rounded-3xl border-white">
-                      <ProjectCard
-                        to={"/MixedUse"}
-                        text={"MIXED USE DEVELOPMENT"}
-                        src={render01}
-                      />
+                      <a
+                        href="/MixedUse"
+                        alt="Mixed Use"
+                        className="w-[60%] rounded-3xl custom-shadow opacity-90 
+    hover:opacity-100 hover:scale-[1.02] hover:border-[2px] hover:border-[#e5e4e2] transition-all cursor-pointer relative"
+                      >
+                        <ProjectCard
+                          text={"MIXED USE DEVELOPMENT"}
+                          src={render01}
+                        />
+                      </a>
                       <div className="text-white">2022</div>
                     </div>
                     <div className="flex flex-col h-full justify-center items-center text-center w-full border rounded-3xl border-white">
-                      <ProjectCard
-                        to={"/V01"}
-                        text={"PRIVATE VILLA"}
-                        src={render02}
-                      />
+                      <a
+                        href="/V01"
+                        alt="V01"
+                        className="w-[60%] rounded-3xl custom-shadow opacity-90 
+    hover:opacity-100 hover:scale-[1.02] hover:border-[2px] hover:border-[#e5e4e2] transition-all cursor-pointer relative"
+                      >
+                        <ProjectCard text={"PRIVATE VILLA"} src={render02} />
+                      </a>
                       <div className="text-white">2024</div>
                     </div>
                   </div>
                   <div className="w-1/2 h-1/2 ">
                     <div className="flex flex-col h-full justify-center items-center text-center w-full border rounded-3xl border-white">
-                      <ProjectCard
-                        to={"/V02"}
-                        text={"VILLA 02"}
-                        src={render03}
-                      />
+                      <a
+                        href="/V02"
+                        alt="V02"
+                        className="w-[60%] rounded-3xl custom-shadow opacity-90 
+    hover:opacity-100 hover:scale-[1.02] hover:border-[2px] hover:border-[#e5e4e2] transition-all cursor-pointer relative"
+                      >
+                        <ProjectCard text={"VILLA 02"} src={render03} />
+                      </a>
                       <div className="text-white">2023</div>
                     </div>
                     <div className="flex flex-col h-full justify-center items-center text-center w-full border rounded-3xl border-white">
-                      <ProjectCard
-                        to={"/Carport"}
-                        text={"CARPORT"}
-                        src={render04}
-                      />
+                      <a
+                        href="/Carport"
+                        alt="Carport"
+                        className="w-[60%] rounded-3xl custom-shadow opacity-90 
+    hover:opacity-100 hover:scale-[1.02] hover:border-[2px] hover:border-[#e5e4e2] transition-all cursor-pointer relative"
+                      >
+                        <ProjectCard text={"CARPORT"} src={render04} />
+                      </a>
                       <div className="text-white">2023</div>
                     </div>
                   </div>
