@@ -12,7 +12,20 @@ import logo from "../assets/images/Codesign_Logo_Inv 1.svg";
 import { Man } from "./Man";
 import ProjectCard from "./ProjectCard";
 
-export function Hero3D(props) {
+export function Hero3D({ cloudinaryUrl, ...props}) {
+
+  const bg = `${cloudinaryUrl}/08_ujpych`;
+  const bg01 = `${cloudinaryUrl}/06_qcvmdm`;
+  const render01 = `${cloudinaryUrl}/01AnaPerspektif_binjqw`;
+  const render02 = `${cloudinaryUrl}/Image01_a3wraq`;
+  const render03 = `${cloudinaryUrl}/05_gtdpby`;
+  const render04 = `${cloudinaryUrl}/03_nkgusl`;
+  const AboutImages = {
+    Joali: "jb-arrival-jetty_cm8ri2",
+    Emaar: "emaar-square-mall_cihdim",
+    bg01: "06_qcvmdm",
+  };
+
   const group = useRef();
 
   const emmissiveIntensity = 5;
@@ -954,7 +967,7 @@ export function Hero3D(props) {
             <Html fullscreen className="-translate-y-[15%]">
               <>
                 <div
-                  className="w-[95%] h-[95%] rounded-3xl border border-white bg-cover bg-center custom-shadow mb-4 z-10 flex flex-col relative select-none translate-x-[5%] -translate-y-[11%]"
+                  className="w-[95%] h-[95%] rounded-3xl border border-white bg-cover bg-center custom-shadow mb-4 z-10 flex flex-col relative select-none translate-x-[5%] -translate-y-[10%]"
                   style={{ backgroundImage: `url(${bg01})` }}
                 >
                   <div className="w-full h-full bg-black opacity-45 absolute left-0 right-0 rounded-3xl"></div>
@@ -999,7 +1012,7 @@ export function Hero3D(props) {
                       </a>
                       <div className="flex w-full text-xs lg:text-sm">
                         <img
-                          src={Joali}
+                          src={`${cloudinaryUrl}/${AboutImages.Joali}`}
                           alt="JoaliBeing_aerial"
                           className="w-56 flex "
                         />
@@ -1016,7 +1029,7 @@ export function Hero3D(props) {
                       </a>
                       <div className="flex w-full text-xs lg:text-sm pt-1">
                         <img
-                          src={Emaar}
+                          src={`${cloudinaryUrl}/${AboutImages.Emaar}`}
                           alt="Emaar_aerial"
                           className="w-56 flex "
                         />
@@ -1154,7 +1167,7 @@ export function Hero3D(props) {
           <Html fullscreen>
             <div
               className="w-[90%] h-[97%] rounded-3xl bg-cover bg-center custom-shadow z-10 flex flex-col relative translate-x-28 -translate-y-[75px] select-none"
-              style={{ backgroundImage: `url(${bg02})`, borderRadius: "24 px" }}
+              style={{ backgroundImage: `url(${bg})`, borderRadius: "24 px" }}
             >
               <div className="w-full h-full bg-black rounded-3xl opacity-55 absolute left-0 right-0"></div>
               <button

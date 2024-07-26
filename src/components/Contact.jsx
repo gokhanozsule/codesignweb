@@ -14,7 +14,7 @@ const Contact = () => {
       >
         <div className="w-full h-full bg-black opacity-[0.97] absolute left-0 right-0"></div>
         <div className="flex flex-row h-full w-full justify-between pr-24 pl-24">
-          <div className="absolute h-[85%] w-full bottom-[5%] left-0 flex justify-center items-end rounded-3xl z-10 cursor-pointer">
+          <div className="absolute h-full w-full bottom-[5%] left-0 flex justify-center items-end rounded-3xl z-10 cursor-pointer">
             <Canvas
               camera={{ position: [3, 1, 3.5], fov: 60 }}
               dpr={[1.5, 2]}

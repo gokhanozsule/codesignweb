@@ -3,7 +3,8 @@ import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Man } from "./Man";
 
-const About = () => {
+const About = ({ cloudinaryUrl }) => {
+  const bg = `${cloudinaryUrl}/06_qcvmdm`;
   const AboutImages = {
     Joali: "jb-arrival-jetty_cm8ri2",
     Emaar: "emaar-square-mall_cihdim",
@@ -13,7 +14,7 @@ const About = () => {
     <>
       <div
         className="w-full h-full rounded-3xl bg-cover bg-center custom-shadow mb-4 z-10 flex flex-col relative select-none"
-        style={{ backgroundImage: `url(${AboutImages.bg})` }}
+        style={{ backgroundImage: `url(${bg})` }}
       >
         <div className="w-full h-full bg-black opacity-45 absolute left-0 right-0"></div>
         <div className="flex flex-row h-full w-full justify-between pr-24 pl-24 relative">
@@ -42,7 +43,7 @@ const About = () => {
             </a>
             <div className="flex w-full text-sm">
               <img
-                src={AboutImages.Joali}
+                src={`${cloudinaryUrl}/${AboutImages.Joali}`}
                 alt="JoaliBeing_aerial"
                 className="w-56 flex "
               />
@@ -59,7 +60,7 @@ const About = () => {
             </a>
             <div className="flex w-full text-sm pt-1">
               <img
-                src={AboutImages.Emaar}
+                src={`${cloudinaryUrl}/${AboutImages.Emaar}`}
                 alt="Emaar_aerial"
                 className="w-56 flex "
               />

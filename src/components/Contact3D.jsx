@@ -118,7 +118,7 @@ export function Contact3D(props) {
                 style={{ backgroundImage: `url(${bg})` }}
               >
                 <div className="w-full h-full z-20 bg-black opacity-75 absolute rounded-full left-0 right-0"></div>
-                <div className="flex h-full w-full flex-col text-white z-30">
+                <div className="flex h-full w-full flex-col mt-1 text-white z-30">
                   <button
                     className=" border rounded-full w-6 h-6 flex justify-center items-center ml-4 mt-4 hover:bg-slate-400 text-white z-30"
                     onClick={() => setHoveredIco(false)}

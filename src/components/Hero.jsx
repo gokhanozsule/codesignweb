@@ -40,7 +40,7 @@ const Hero = ({ cloudinaryUrl }) => {
             <div className="text-white z-10 mb-8 text-3xl pointer-events-none flex">
               &harr;
             </div>
-            <div className="text-white mb-0 sm:mb-28 flex">
+            <div className="text-white mb-0 sm:mb-24 flex">
               For a better journey through a website, <br />
               3D interactions are fun to have.. <br />
               Drag the &harr; sign / Check Interactive Model for more...
