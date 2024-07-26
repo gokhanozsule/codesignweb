@@ -12,7 +12,7 @@ export default defineConfig(({ command, mode }) => {
       ),
     },
     plugins: [react()],
-    base: env.VITE_BASE_URL || "/",
+    base: "/",
     build: {
       rollupOptions: {
         input: {

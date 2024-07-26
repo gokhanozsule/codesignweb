@@ -1,9 +1,8 @@
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export function Sphere01(props) {
-  const basePath = import.meta.env.VITE_BASE_URL === '/codesignweb/' ? '' : import.meta.env.VITE_BASE_URL;
-  const { nodes, materials } = useGLTF(`${basePath}models/Sphere.glb`)
+  const { nodes, materials } = useGLTF(`/models/Sphere.glb`);
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -115,7 +114,7 @@ export function Sphere01(props) {
         scale={0.05}
       />
     </group>
-  )
+  );
 }
-const basePath = import.meta.env.VITE_BASE_URL === '/codesignweb/' ? '' : import.meta.env.VITE_BASE_URL;
-useGLTF.preload(`${basePath}models/Sphere.glb`)
+
+useGLTF.preload(`/models/Sphere.glb`);

@@ -2,16 +2,15 @@ import React from "react";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Man } from "./Man";
-import Joali from "../images/jb-arrival-jetty.webp";
-import Emaar from "../images/emaar-square-mall.jpg";
-import bg from "../images/06.png";
+import * as images from "../imageTable";
 
 const About = () => {
+  const { AboutImages } = images;
   return (
     <>
       <div
         className="w-full h-full rounded-3xl bg-cover bg-center custom-shadow mb-4 z-10 flex flex-col relative select-none"
-        style={{ backgroundImage: `url(${bg})` }}
+        style={{ backgroundImage: `url(${AboutImages.bg})` }}
       >
         <div className="w-full h-full bg-black opacity-45 absolute left-0 right-0"></div>
         <div className="flex flex-row h-full w-full justify-between pr-24 pl-24 relative">
@@ -39,7 +38,11 @@ const About = () => {
               Joali Being Maldives / 4 years
             </a>
             <div className="flex w-full text-sm">
-              <img src={Joali} alt="JoaliBeing_aerial" className="w-56 flex " />
+              <img
+                src={AboutImages.Joali}
+                alt="JoaliBeing_aerial"
+                className="w-56 flex "
+              />
             </div>
             <div className="flex w-full text-sm pt-1 text-red-400">
               Design Lead and Construction Consultant for
@@ -52,7 +55,11 @@ const About = () => {
               EmaarSquare Istanbul / 6 years
             </a>
             <div className="flex w-full text-sm pt-1">
-              <img src={Emaar} alt="Emaar_aerial" className="w-56 flex " />
+              <img
+                src={AboutImages.Emaar}
+                alt="Emaar_aerial"
+                className="w-56 flex "
+              />
             </div>
           </div>
           <div className="flex flex-col h-full justify-center items-center text-center w-full text-white">
