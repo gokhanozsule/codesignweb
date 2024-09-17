@@ -27,7 +27,7 @@ function App() {
   return (
     <>
       <div
-        className="h-screen w-screen flex flex-col justify-center items-center 
+        className="h-full w-full flex flex-col justify-center items-center 
       text-center bg-gradient-to-b from-[#393a39] to-[#191a1a] "
       >
         <Router>

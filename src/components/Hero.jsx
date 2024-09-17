@@ -9,7 +9,7 @@ const Hero = ({ cloudinaryUrl }) => {
   return (
     <>
       <div
-        className="w-full h-[100vh] rounded-3xl bg-cover bg-center custom-shadow  z-10 flex flex-col relative select-none"
+        className="w-full h-full rounded-3xl bg-cover bg-center custom-shadow  z-10 flex flex-col relative select-none overflow-hidden"
         style={{
           backgroundImage: `url(${cloudinaryUrl}/10a_ggzs0j)`,
           borderRadius: "24 px",
@@ -17,7 +17,7 @@ const Hero = ({ cloudinaryUrl }) => {
       >
         <div className="w-full h-full bg-black rounded-3xl opacity-55 absolute left-0 right-0"></div>
         <div className="w-full h-full flex flex-col sm:flex-row rounded-3xl justify-center items-center border border-white">
-          <div className="w-full sm:w-1/2 h-full flex flex-row sm:flex-col justify-center items-start mt-20 sm:mt-0 sm:items-center gap-10 rounded-3xl">
+          <div className="w-full sm:w-1/2 h-full flex  flex-col justify-start sm:justify-center items-center mt-20 sm:mt-0 gap-10 rounded-3xl">
             <div className="w-[90%] flex items-center justify-center">
               <ProjectCard
                 to={"/MixedUse"}
@@ -40,13 +40,13 @@ const Hero = ({ cloudinaryUrl }) => {
             <div className="text-white z-10 mb-8 text-3xl pointer-events-none flex">
               &harr;
             </div>
-            <div className="text-white mb-0 sm:mb-24 flex">
+            <div className="text-white text-sm sm:text-[18px] mb-4 sm:mb-24 flex">
               For a better journey through a website, <br />
               3D interactions are fun to have.. <br />
               Drag the &harr; sign / Check Interactive Model for more...
             </div>
           </div>
-          <div className="absolute h-[30%] sm:h-[65%] w-full sm:w-1/2 bottom-[14%] sm:bottom-[26%] left-0 sm:left-1/2 flex justify-center items-end rounded-3xl z-0 cursor-pointer ">
+          <div className="absolute h-[25%] sm:h-[70%] w-full sm:w-1/2 bottom-[14%] sm:bottom-[26%] left-0 sm:left-1/2 flex justify-center items-end rounded-3xl z-0 cursor-pointer ">
             <Canvas
               camera={{ position: [0, 0, 6] }}
               dpr={[1.5, 2]}
