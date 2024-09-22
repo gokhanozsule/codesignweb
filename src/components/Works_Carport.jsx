@@ -11,13 +11,13 @@ const Works_Carport = ({ cloudinaryUrl }) => {
         style={{ backgroundImage: `url(${bg})`, borderRadius: "24 px" }}
       >
         <div className="w-full h-full bg-black rounded-3xl opacity-55 absolute left-0 right-0 z-10">
-          <div className="absolute text-white z-50 left-[2.5%] bottom-[80%]">
+          <div className="absolute text-white z-50 left-[2.5%] bottom-[90%]">
             Year
           </div>
-          <div className="absolute text-white z-50 left-[2.5%] bottom-[75%]">
+          <div className="absolute text-white z-50 left-[2.5%] bottom-[87%]">
             2022
           </div>
-          <div className="absolute text-white z-50 left-[14%] bottom-[80%]">
+          <div className="absolute text-white z-50 left-[14%] bottom-[90%]">
             2500 sqm
           </div>
         </div>

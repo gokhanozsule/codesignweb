@@ -13,18 +13,18 @@ const Works_Mix = ({ cloudinaryUrl }) => {
         style={{ backgroundImage: `url(${bg})`, borderRadius: "24 px" }}
       >
         <div className="w-full h-full bg-black rounded-3xl opacity-55 absolute left-0 right-0 z-10">
-          <div className="absolute text-white z-50 left-[2.5%] bottom-[80%]">
+          <div className="absolute text-white z-50 left-[2.5%] bottom-[90%]">
             Year
           </div>
-          <div className="absolute text-white z-50 left-[2.5%] bottom-[75%]">
+          <div className="absolute text-white z-50 left-[2.5%] bottom-[87%]">
             2022
           </div>
-          <div className="absolute text-white z-50 left-[14%] bottom-[80%]">
+          <div className="absolute text-white z-50 left-[14%] bottom-[90%]">
             16000 sqm
           </div>
           <Link to="/MixedUseInteriors">
             <div
-              className="absolute text-white z-50 right-[8%] bottom-[78%] p-1 w-28
+              className="absolute text-white z-50 right-[8%] bottom-[88%] p-1 w-28
                         border border-white rounded-2xl hover:bg-neutral-600 hover:cursor-pointer "
             >
               Interiors

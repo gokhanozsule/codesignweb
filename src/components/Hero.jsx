@@ -16,8 +16,8 @@ const Hero = ({ cloudinaryUrl }) => {
         }}
       >
         <div className="w-full h-full bg-black rounded-3xl opacity-55 absolute left-0 right-0"></div>
-        <div className="w-full h-full flex flex-col sm:flex-row rounded-3xl justify-center items-center border border-white">
-          <div className="w-full sm:w-1/2 h-full flex  flex-col justify-start sm:justify-center items-center mt-20 sm:mt-0 gap-10 rounded-3xl">
+        <div className="h-full flex flex-col gap-2 sm:gap-0 sm:flex-row rounded-3xl justify-center items-center border border-white">
+          <div className="w-full sm:w-1/2 flex  flex-col justify-center items-center my-auto gap-4 rounded-3xl">
             <div className="w-[90%] flex items-center justify-center">
               <ProjectCard
                 to={"/MixedUse"}
@@ -33,20 +33,11 @@ const Hero = ({ cloudinaryUrl }) => {
               />
             </div>
           </div>
-          <div className="w-full sm:w-1/2 h-1/2 sm:h-full -mt-[75%] sm:mt-0 bg-[#404242] flex flex-col justify-between items-center text-center rounded-3xl custom-shadow">
+          <div className="relative w-full sm:w-1/2 min-h-1/2 sm:h-full bg-none sm:mt-0  flex flex-col justify-between items-center text-center rounded-3xl custom-shadow">
             <div className="w-full h-10 bg-[#504f51] rounded-3xl flex justify-end items-center text-center pr-4 border border-white text-white z-10">
               3D Web
             </div>
-            <div className="text-white z-10 mb-8 text-3xl pointer-events-none flex">
-              &harr;
-            </div>
-            <div className="text-white text-sm sm:text-[18px] mb-4 sm:mb-24 flex">
-              For a better journey through a website, <br />
-              3D interactions are fun to have.. <br />
-              Drag the &harr; sign / Check Interactive Model for more...
-            </div>
-          </div>
-          <div className="absolute h-[25%] sm:h-[70%] w-full sm:w-1/2 bottom-[14%] sm:bottom-[26%] left-0 sm:left-1/2 flex justify-center items-end rounded-3xl z-0 cursor-pointer ">
+            <div className=" h-[65%] sm:h-[70%] sm:bottom-[35%] w-full flex justify-center items-end z-0 cursor-grab  ">
             <Canvas
               camera={{ position: [0, 0, 6] }}
               dpr={[1.5, 2]}
@@ -87,6 +78,16 @@ const Hero = ({ cloudinaryUrl }) => {
               </Text>
             </Canvas>
           </div>
+            <div className="text-white z-10 mb-8 text-3xl pointer-events-none flex absolute top-1/2">
+              &harr;
+            </div>
+            <div className="text-white text-sm sm:text-[18px] mt-2 mb-4 sm:mb-24 flex">
+              For a better journey through a website, <br />
+              3D interactions are fun to have.. <br />
+              Drag the &harr; sign / Check Interactive Model for more...
+            </div>
+          </div>
+          
         </div>
       </div>
       {/* <Footer/> */}

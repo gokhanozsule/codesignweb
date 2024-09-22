@@ -12,13 +12,13 @@ const Works_V01_Int = ({ cloudinaryUrl }) => {
         style={{ backgroundImage: `url(${bg})`, borderRadius: "24 px" }}
       >
         <div className="w-full h-full bg-black rounded-3xl opacity-55 absolute left-0 right-0 z-10">
-          <div className="absolute text-white z-50 left-[2.5%] bottom-[80%]">
+          <div className="absolute text-white z-50 left-[2.5%] bottom-[90%]">
             Year
           </div>
-          <div className="absolute text-white z-50 left-[2.5%] bottom-[75%]">
+          <div className="absolute text-white z-50 left-[2.5%] bottom-[87%]">
             2022
           </div>
-          <div className="absolute text-white z-50 right-[8%] bottom-[78%] lg:bottom-[70%] p-1 flex flex-row lg:flex-col w-[250-px] gap-2">
+          <div className="absolute text-white z-50 right-[8%] bottom-[87%] lg:bottom-[80%] p-1 flex flex-row lg:flex-col w-[250-px] gap-2">
             <Link to="/V01">
               <div
                 className=" text-white z-50 right-[8%] bottom-[78%] p-1 w-28
