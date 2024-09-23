@@ -17,7 +17,7 @@ const Hero = ({ cloudinaryUrl }) => {
       >
         <div className="w-full h-full bg-black rounded-3xl opacity-55 absolute left-0 right-0"></div>
         <div className="h-full flex flex-col gap-2 sm:gap-0 sm:flex-row rounded-3xl justify-center items-center border border-white">
-          <div className="w-full sm:w-1/2 flex  flex-col justify-center items-center my-auto gap-4 rounded-3xl">
+          <div className="w-full sm:w-1/2 flex  flex-col justify-center items-center gap-4 my-auto rounded-3xl">
             <div className="w-[90%] flex items-center justify-center">
               <ProjectCard
                 to={"/MixedUse"}
@@ -78,10 +78,10 @@ const Hero = ({ cloudinaryUrl }) => {
               </Text>
             </Canvas>
           </div>
-            <div className="text-white z-10 mb-8 text-3xl pointer-events-none flex absolute top-1/2">
+            <div className="text-white z-10 mb-8 text-3xl pointer-events-none flex absolute top-[37.5%]">
               &harr;
             </div>
-            <div className="text-white text-sm sm:text-[18px] mt-2 mb-4 sm:mb-24 flex">
+            <div className="text-white text-sm sm:text-[16px] mt-2 mb-4 sm:mb-24 flex">
               For a better journey through a website, <br />
               3D interactions are fun to have.. <br />
               Drag the &harr; sign / Check Interactive Model for more...

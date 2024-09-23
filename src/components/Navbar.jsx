@@ -21,7 +21,7 @@ const Navbar = () => {
           </div>
         </div>
       </Link>
-      <div className="mx-4 flex justify-center items-start gap-2 ">
+      <div className="mx-4 hidden sm:flex justify-center items-start gap-2">
         <Link to="/Works">
           <button className="rounded-xl p-1 cursor-pointer hover:scale-90 hover:bg-[#525253] transition-all">
             Works

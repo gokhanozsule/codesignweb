@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./Navbar";
 import ProjectCard from "./ProjectCard";
 
 const Works = ({ cloudinaryUrl }) => {

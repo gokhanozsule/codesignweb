@@ -17,7 +17,7 @@ const ProjectCard = ({ text, src, to = null }) => {
 
   return (
     <Link
-      className="max-w-[90%] rounded-3xl custom-shadow opacity-90 text-[12px] sm:text-lg
+      className="max-w-[80%] max-h-[85%] rounded-3xl custom-shadow opacity-90 text-[12px] sm:text-lg
     hover:opacity-100 hover:scale-[1.02] hover:border-[2px] hover:border-[#e5e4e2] transition-all cursor-pointer relative"
       to={to}
     >
