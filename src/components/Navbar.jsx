@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className="w-full h-10 text-white flex justify-between border border-gray-400 items-center rounded-3xl z-30 custom-shadow">
       <Link to="/Welcome">
-        <div className="flex justify-center items-center gap-4 cursor-pointer hover:scale-90 hover:pl-[2px] ml-4 sm:ml-0 origin-left transition-all">
+        <div className="flex justify-center items-center text-sm sm:text-base gap-4 cursor-pointer hover:scale-90 hover:pl-[2px] ml-0 origin-left transition-all">
           <img
             src={logo}
             className="w-10 h-10 p-1 rounded-full border border-black invert hover:scale-90 hover:bg-[#525253] transition-all"
