@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Html, Image, Outlines, Text, useGLTF } from "@react-three/drei";
 import { DoubleSide } from "three";
 import { useFrame } from "@react-three/fiber";
@@ -42,6 +42,16 @@ export function Contact3D(props) {
   const handleColorGray = () => {
     setHexNum(0);
   };
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  
+  useEffect(() =>{
+    const handleResize = () =>{
+      setIsMobile(window.innerWidth < 640);
+    }
+  window.addEventListener('resize', handleResize);
+  return () => window.removeEventListener('resize', handleResize);
+  },[]); 
 
   return (
     <>
@@ -111,24 +121,24 @@ export function Contact3D(props) {
             <Html
               as="div"
               fullscreen
-              className="flex flex-col justify-end mt-[-560px] items-center rounded-3xl cursor-default select-none"
+              className="flex flex-col justify-end mt-[-760px] items-center rounded-3xl cursor-default select-none"
             >
               <div
-                className="h-[10%] rounded-full z-20 border mb-16 bg-cover bg-center w-[95%] flex flex-col  relative "
+                className="h-[5%] sm:h-[8%] rounded-full z-20 border mb-16 bg-cover bg-center w-[95%] flex flex-col relative "
                 style={{ backgroundImage: `url(${bg})` }}
               >
                 <div className="w-full h-full z-20 bg-black opacity-75 absolute rounded-full left-0 right-0"></div>
                 <div className="flex h-full w-full flex-col mt-1 text-white z-30">
                   <button
-                    className=" border rounded-full w-6 h-6 flex justify-center items-center ml-4 mt-4 hover:bg-slate-400 text-white z-30"
+                    className=" border rounded-full w-6 h-6 flex justify-center items-center ml-2 sm:ml-4 mt-[5px] sm:mt-4 hover:bg-slate-400 text-white z-30"
                     onClick={() => setHoveredIco(false)}
                   >
                     X
                   </button>
-                  <div className="text-base lg:text-xl -translate-y-10">
+                  <div className="text-xs sm:text-base lg:text-xl -translate-y-[28px] sm:-translate-y-10">
                     Welcome to a new 3D aproach where the aim is :
                   </div>
-                  <div className="mt-2 text-base lg:text-xl -translate-y-12">
+                  <div className="mt-2 text-xs sm:text-base lg:text-xl -translate-y-[37px] sm:-translate-y-12">
                     Coding for Design, Designing for everyone
                   </div>
                 </div>
@@ -412,55 +422,55 @@ export function Contact3D(props) {
           </group>
         </group>
       </group>
-      <Blop position={[0.22, 0.4, -2.1]} scale={0.35} />
-      <Text position={[-1.4, 0.8, -2.32]} scale={0.3}>
+      <Blop position={isMobile ? [0.22, -0.1, -1] : [0.22, 0.4, -2.1]} scale={isMobile ? 0.175 : 0.35} />
+      <Text position={isMobile ? [-0.75, 0.1, -1.2] : [-1.4, 0.8, -2.32]} scale={isMobile ? 0.15 : 0.3}>
         3D Web
       </Text>
       <Text
-        position={[-2.6, 1.4, 1.9]}
-        scale={0.12}
+        position={isMobile ? [-1.25, 0.4, 0.95] : [-2.6, 1.4, 1.9]}
+        scale={isMobile ? 0.075 : 0.12}
         rotation={[0, Math.PI / 2, 0]}
       >
         Architecture
       </Text>
       <Text
-        position={[-2.6, 1.15, 1.9]}
-        scale={0.12}
+        position={isMobile ? [-1.25, 0.25, 0.95] : [-2.6, 1.15, 1.9]}
+        scale={isMobile ? 0.075 : 0.12}
         rotation={[0, Math.PI / 2, 0]}
       >
         BIM Modeling
       </Text>
       <Text
-        position={[-2.5, 1.4, 0.65]}
-        scale={0.12}
+        position={isMobile ? [-1.25, 0.4, 0.35] : [-2.5, 1.4, 0.65]}
+        scale={isMobile ? 0.075 : 0.12}
         rotation={[0, Math.PI / 2, 0]}
       >
         Interior Design
       </Text>
       <Text
-        position={[-2.3, 0.9, -0.8]}
-        scale={0.2}
+        position={isMobile ? [-1.175, 0.15, -0.4] : [-2.3, 0.9, -0.8]}
+        scale={isMobile ? 0.125 : 0.2}
         rotation={[0, Math.PI / 2, 0]}
       >
         Visualisation
       </Text>
       <Image
         url={logo}
-        scale={0.5}
+        scale={isMobile ? 0.35 : 0.5}
         color="white"
-        position={[2, 0.9, -2.4]}
+        position={isMobile ? [1, 0.25, -1.25] : [2, 0.9, -2.4]}
         side={DoubleSide}
       />
       <Text
-        position={[2.35, -0.44, 0.1]}
-        scale={0.15}
+        position={isMobile ? [1.22, -0.592, 0.1] : [2.35, -0.44, 0.1]}
+        scale={isMobile ? 0.125 : 0.15}
         rotation={[-Math.PI / 2, 0, Math.PI / 2]}
       >
         Change UI colors
       </Text>
       <Text
-        position={[1.7, -0.08, -1.37]}
-        scale={0.15}
+        position={isMobile ? [0.9, -0.4, -0.71] : [1.7, -0.08, -1.37]}
+        scale={isMobile ? 0.09 : 0.15}
         rotation={[-Math.PI / 2, 0, Math.PI / 2]}
         color={"black"}
       >

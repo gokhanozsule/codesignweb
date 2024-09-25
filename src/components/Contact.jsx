@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
@@ -6,6 +6,17 @@ import { Contact3D } from "./Contact3D";
 
 const Contact = () => {
   const bg = "https://res.cloudinary.com/doeucuf7e/image/upload/07_zzchd2";
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  
+  useEffect(() =>{
+    const handleResize = () =>{
+      setIsMobile(window.innerWidth < 640);
+    }
+  window.addEventListener('resize', handleResize);
+  return () => window.removeEventListener('resize', handleResize);
+  },[]); 
+
   return (
     <>
       <div
@@ -39,7 +50,7 @@ const Contact = () => {
                 shadow-bias={-0.0001}
               />
               <Environment preset="warehouse" environmentIntensity={1.25} />
-              <Contact3D position={[0, -0.75, 0]} scale={1.25} />
+              <Contact3D position={[0, -0.75, 0]} scale={isMobile ? 0.65 : 1.25} />
             </Canvas>
           </div>
         </div>

@@ -54,6 +54,18 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
   });
 
   const { nodes, materials } = useMemo(() => useGLTF(`/models/Hero3D.glb`));
+
+  
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  
+  useEffect(() =>{
+    const handleResize = () =>{
+      setIsMobile(window.innerWidth < 640);
+    }
+  window.addEventListener('resize', handleResize);
+  return () => window.removeEventListener('resize', handleResize);
+  },[]); 
+
   return (
     <>
       <group ref={group} {...props} dispose={null}>
@@ -860,7 +872,7 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
               className="flex flex-col justify-center items-center rounded-3xl cursor-default select-none relative z-20"
             >
               <div
-                className="h-[65%] rounded-3xl z-20 border mb-16 bg-cover bg-center w-[75%] flex flex-col -translate-x-[8%] -translate-y-[25%] "
+                className="h-[65%] rounded-3xl z-20 border mb-16 bg-cover bg-center w-[75%] flex flex-col -translate-x-[8%] sm:-translate-y-[25%] "
                 style={{ backgroundImage: `url(${bg})` }}
               >
                 <div className="w-full h-full z-20 bg-black opacity-70 absolute rounded-3xl left-0 right-0"></div>
@@ -966,7 +978,7 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
             <Html fullscreen className="-translate-y-[15%]">
               <>
                 <div
-                  className="w-[95%] h-[95%] rounded-3xl border border-white bg-cover bg-center custom-shadow mb-4 z-10 flex flex-col relative select-none translate-x-[5%] -translate-y-[10%]"
+                  className="w-[95%] h-[95%] rounded-3xl border border-white bg-cover bg-center custom-shadow mb-4 z-10 flex flex-col relative select-none translate-x-[12%] sm:translate-x-[5%] sm:-translate-y-[10%]"
                   style={{ backgroundImage: `url(${bg01})` }}
                 >
                   <div className="w-full h-full bg-black opacity-45 absolute left-0 right-0 rounded-3xl"></div>
@@ -1078,7 +1090,7 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
                         </p>
                       </div>
                     </div>
-                    <div className="absolute h-[85%] w-1/4 bottom-[5%] left-[37.5%] flex justify-center items-end rounded-3xl z-10 cursor-pointer">
+                    <div className="absolute h-[85%] w-1/4 bottom-[5%] left-[37.5%] hidden sm:flex justify-center items-end rounded-3xl z-10 cursor-pointer">
                       <Canvas
                         camera={{ position: [0, 1, 6] }}
                         dpr={[1.5, 2]}
@@ -1154,7 +1166,7 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
             />
           </mesh>
           {hoveredWorks && (
-            <Html position={[2.75, 2.5, 0.25]}>
+            <Html position={/* isMobile ? [2, 1, 0] :  */[2.75, 2.5, 0.25]}>
               <div className="bg-slate-700/75 text-white border border-white px-2 p-1 rounded-full cursor-pointer">
                 Works
               </div>
@@ -1165,7 +1177,7 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
         {works && (
           <Html fullscreen>
             <div
-              className="w-[90%] h-[97%] rounded-3xl bg-cover bg-center custom-shadow z-10 flex flex-col relative translate-x-28 -translate-y-[75px] select-none"
+              className="w-[90%] h-[97%] rounded-3xl bg-cover bg-center custom-shadow z-10 flex flex-col relative translate-x-14 sm:translate-x-28 sm:-translate-y-[75px] select-none"
               style={{ backgroundImage: `url(${bg})`, borderRadius: "24 px" }}
             >
               <div className="w-full h-full bg-black rounded-3xl opacity-55 absolute left-0 right-0"></div>
@@ -1177,15 +1189,15 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
               >
                 X
               </button>
-              <div className="flex flex-col h-full w-full justify-between ">
-                <div className="w-full flex h-full">
-                  <div className="w-1/2 h-1/2 ">
+              <div className="flex flex-col h-full w-full">
+                <div className="w-full flex flex-col sm:flex-row h-full">
+                  <div className="sm:w-1/2 h-1/2 sm:h-full flex flex-col  ">
                     <div className="flex flex-col h-full justify-center items-center text-center w-full border rounded-3xl border-white">
                       <a
                         href="/MixedUse"
                         alt="Mixed Use"
                         className="w-[60%] rounded-3xl custom-shadow opacity-90 
-    hover:opacity-100 hover:scale-[1.02] hover:border-[2px] hover:border-[#e5e4e2] transition-all cursor-pointer relative"
+                        hover:opacity-100 hover:scale-[1.02] hover:border-[2px] hover:border-[#e5e4e2] transition-all cursor-pointer relative"
                       >
                         <ProjectCard
                           text={"MIXED USE DEVELOPMENT"}
@@ -1199,20 +1211,20 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
                         href="/V01"
                         alt="V01"
                         className="w-[60%] rounded-3xl custom-shadow opacity-90 
-    hover:opacity-100 hover:scale-[1.02] hover:border-[2px] hover:border-[#e5e4e2] transition-all cursor-pointer relative"
+                        hover:opacity-100 hover:scale-[1.02] hover:border-[2px] hover:border-[#e5e4e2] transition-all cursor-pointer relative"
                       >
                         <ProjectCard text={"PRIVATE VILLA"} src={render02} />
                       </a>
                       <div className="text-white">2024</div>
                     </div>
                   </div>
-                  <div className="w-1/2 h-1/2 ">
+                  <div className="sm:w-1/2 h-1/2 sm:h-full flex flex-col">
                     <div className="flex flex-col h-full justify-center items-center text-center w-full border rounded-3xl border-white">
                       <a
                         href="/V02"
                         alt="V02"
                         className="w-[60%] rounded-3xl custom-shadow opacity-90 
-    hover:opacity-100 hover:scale-[1.02] hover:border-[2px] hover:border-[#e5e4e2] transition-all cursor-pointer relative"
+                        hover:opacity-100 hover:scale-[1.02] hover:border-[2px] hover:border-[#e5e4e2] transition-all cursor-pointer relative"
                       >
                         <ProjectCard text={"VILLA 02"} src={render03} />
                       </a>
@@ -1223,7 +1235,7 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
                         href="/Carport"
                         alt="Carport"
                         className="w-[60%] rounded-3xl custom-shadow opacity-90 
-    hover:opacity-100 hover:scale-[1.02] hover:border-[2px] hover:border-[#e5e4e2] transition-all cursor-pointer relative"
+                        hover:opacity-100 hover:scale-[1.02] hover:border-[2px] hover:border-[#e5e4e2] transition-all cursor-pointer relative"
                       >
                         <ProjectCard text={"CARPORT"} src={render04} />
                       </a>
@@ -2465,7 +2477,7 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
         url={logo}
         scale={0.75}
         color="white"
-        position={[0.235, 2.5, 3.75]}
+        position={isMobile ? [0.235,2.25,2.7] : [0.235, 2.5, 3.75]}
         rotation={[0, Math.PI / 2, 0]}
         side={DoubleSide}
       />

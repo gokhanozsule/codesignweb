@@ -1,5 +1,4 @@
-import React, { useRef } from "react";
-import Navbar from "./Navbar";
+import React, { useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Environment,
@@ -12,17 +11,29 @@ import { Hero3D } from "./Hero3D";
 import logo from "../assets/images/Codesign_Logo_Inv 1.svg";
 
 const Welcome = ({cloudinaryUrl={cloudinaryUrl}}) => {
+
+const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  
+  useEffect(() =>{
+    const handleResize = () =>{
+      setIsMobile(window.innerWidth < 640);
+    }
+  window.addEventListener('resize', handleResize);
+  return () => window.removeEventListener('resize', handleResize);
+  },[]); 
+
+  console.log(isMobile);
   return (
     <>
       <div className="w-full h-full rounded-3xl bg-cover bg-center custom-shadow z-10 flex flex-col relative">
         <div className="w-full h-full opacity-85 absolute left-0 right-0"></div>
 
         <div
-          className="absolute h-full w-full bottom-[4.55%] translate-y-[30px] left-0 flex justify-center items-end 
+          className="absolute h-full w-full bottom-[3.55%] translate-y-[30px] left-0 flex justify-center items-end 
           rounded-3xl z-10 border border-white"
         >
           <Canvas
-            camera={{ position: [11, 2, 9], fov: 50 }}
+            camera={{ position: /* isMobile ? [4, 2, 1] :  */[11, 2, 9], fov: 50 }}
             dpr={[1.25, 1.5]}
             linear
             shadows
@@ -87,7 +98,7 @@ const Welcome = ({cloudinaryUrl={cloudinaryUrl}}) => {
               intensity={5}
             />
             <Environment preset="warehouse" environmentIntensity={0.5} />
-            <Hero3D cloudinaryUrl={cloudinaryUrl} position={[0, -1.5, 1]} scale={1.25} />
+            <Hero3D cloudinaryUrl={cloudinaryUrl} position={isMobile ? [0,0,1] : [0, -1.5, 1]} scale={isMobile? 0.75 : 1.25} />
           </Canvas>
         </div>
         <div className="absolute h-full w-full bg-black z-40 flex items-center justify-center landing pointer-events-none">
