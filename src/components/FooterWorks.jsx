@@ -8,10 +8,10 @@ const FooterWorks = () => {
     <div className='w-screen h-[24vh] custom-shadow flex flex-col items-center justify-center bg-[#202020] z-[100] '>
         <div className='h-full w-full flex items-center justify-center gap-[3%] md:gap-[33%] rounded-3xl '>
         <div className='flex flex-col h-full w-full justify-center items-center text-center text-white'>
-            <div className='h-20 w-full flex flex-col items-center justify-center text-2xl border rounded-3xl'>
+            <div className='h-20 w-full flex flex-col items-center justify-center text-lg sm:text-2xl border rounded-3xl'>
                 OFFERED SERVICES
             </div>
-            <div className='h-full w-full flex items-center justify-center pl-4 sm:pl-20 pr-4 sm:pr-20 pb-4'>
+            <div className='h-full w-full flex items-center justify-center text-md sm:text-base pl-4 sm:pl-20 pr-4 sm:pr-20 pb-4'>
                 <div className='w-full h-full flex justify-center items-center text-center'>
                 Architectural Project
                 </div>

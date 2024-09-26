@@ -22,7 +22,7 @@ const Works_Carport = ({ cloudinaryUrl }) => {
           </div>
         </div>
 
-        <div className="flex w-[80%] md:w-[55%] lg:w-[50%] h-[68%] lg:h-[90%] translate-x-[12.5%] md:translate-x-[40%] lg:translate-x-[50%] translate-y-[30%] lg:translate-y-[2%] justify-center items-center object-center z-50 bg-neutral-900/40  rounded-3xl">
+        <div className="flex sm:w-[80%] md:w-[55%] lg:w-[50%] h-[68%] lg:h-[90%] sm:translate-x-[12.5%] mx-2 sm:mx-0 md:translate-x-[40%] lg:translate-x-[50%] translate-y-[30%] lg:translate-y-[2%] justify-center items-center object-center z-50 bg-neutral-900/40  rounded-3xl">
           <Carousel cloudinaryUrl={cloudinaryUrl} carouselIndex={6} />
         </div>
       </div>

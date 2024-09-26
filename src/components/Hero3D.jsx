@@ -990,7 +990,7 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
                   >
                     X
                   </button>
-                  <div className="flex flex-row h-full w-full justify-between pr-10 lg:pr-24 pl-10 sm:pl-24 relative">
+                  <div className="flex flex-row h-full w-full justify-between pr-4 sm:pr-10 lg:pr-24 pl-4 sm:pl-10 lg:pl-24 relative">
                     <div className="flex flex-col h-full justify-start items-start text-start w-full text-white">
                       <div className="flex w-full text-[10px] lg:text-xs pt-4 lg:pt-10 ">
                         GOKHAN OZSULE

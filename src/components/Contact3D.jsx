@@ -462,7 +462,7 @@ export function Contact3D(props) {
         side={DoubleSide}
       />
       <Text
-        position={isMobile ? [1.22, -0.592, 0.1] : [2.35, -0.44, 0.1]}
+        position={isMobile ? [1.22, -0.592, 0.055] : [2.35, -0.44, 0.1]}
         scale={isMobile ? 0.125 : 0.15}
         rotation={[-Math.PI / 2, 0, Math.PI / 2]}
       >
