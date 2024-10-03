@@ -1,13 +1,15 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Html, Image, Outlines, Text, useGLTF } from "@react-three/drei";
 import { DoubleSide } from "three";
 import { useFrame } from "@react-three/fiber";
 import Blop from "./Blop";
-import logo from "../assets/images/Codesign_Logo_Inv.png";
+import logo from "@/images/Codesign_Logo_Inv.png";
+import { models, backgroundImages } from "@/constants";
 
 export function Contact3D(props) {
-  const bg = "https://res.cloudinary.com/doeucuf7e/image/upload/07_zzchd2";
-  const { nodes, materials } = useGLTF(`/models/Contact3D.glb`);
+  const { nodes, materials } = useGLTF(models.Contact3D);
   const colorHex = ["#212226", "#54532D", "#5E4035", "#242F45"];
   const group = useRef();
 
@@ -44,14 +46,14 @@ export function Contact3D(props) {
   };
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
-  
-  useEffect(() =>{
-    const handleResize = () =>{
+
+  useEffect(() => {
+    const handleResize = () => {
       setIsMobile(window.innerWidth < 640);
-    }
-  window.addEventListener('resize', handleResize);
-  return () => window.removeEventListener('resize', handleResize);
-  },[]); 
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
@@ -125,7 +127,7 @@ export function Contact3D(props) {
             >
               <div
                 className="h-[5%] sm:h-[8%] rounded-full z-20 border mb-16 bg-cover bg-center w-[95%] flex flex-col relative "
-                style={{ backgroundImage: `url(${bg})` }}
+                style={{ backgroundImage: `url(${backgroundImages.contact})` }}
               >
                 <div className="w-full h-full z-20 bg-black opacity-75 absolute rounded-full left-0 right-0"></div>
                 <div className="flex h-full w-full flex-col mt-1 text-white z-30">
@@ -232,7 +234,7 @@ export function Contact3D(props) {
           >
             <div
               className="h-[80%] rounded-3xl border mb-16 bg-cover bg-center w-[75%] flex flex-col relative select-none"
-              style={{ backgroundImage: `url(${bg})` }}
+              style={{ backgroundImage: `url(${backgroundImages.contact})` }}
             >
               <div className="w-full h-full bg-black opacity-70 absolute rounded-3xl left-0 right-0 "></div>
               <button
@@ -422,8 +424,14 @@ export function Contact3D(props) {
           </group>
         </group>
       </group>
-      <Blop position={isMobile ? [0.22, -0.1, -1] : [0.22, 0.4, -2.1]} scale={isMobile ? 0.175 : 0.35} />
-      <Text position={isMobile ? [-0.75, 0.1, -1.2] : [-1.4, 0.8, -2.32]} scale={isMobile ? 0.15 : 0.3}>
+      <Blop
+        position={isMobile ? [0.22, -0.1, -1] : [0.22, 0.4, -2.1]}
+        scale={isMobile ? 0.175 : 0.35}
+      />
+      <Text
+        position={isMobile ? [-0.75, 0.1, -1.2] : [-1.4, 0.8, -2.32]}
+        scale={isMobile ? 0.15 : 0.3}
+      >
         3D Web
       </Text>
       <Text
@@ -455,7 +463,7 @@ export function Contact3D(props) {
         Visualisation
       </Text>
       <Image
-        url={logo}
+        url={logo.src}
         scale={isMobile ? 0.35 : 0.5}
         color="white"
         position={isMobile ? [1, 0.25, -1.25] : [2, 0.9, -2.4]}
@@ -479,4 +487,3 @@ export function Contact3D(props) {
     </>
   );
 }
-useGLTF.preload(`/models/Contact3D.glb`);

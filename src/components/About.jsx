@@ -1,20 +1,19 @@
-import React from "react";
+import { backgroundImages } from "@/constants";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import React from "react";
 import { Man } from "./Man";
 
-const About = ({ cloudinaryUrl }) => {
-  const bg = `${cloudinaryUrl}/06_qcvmdm`;
+const About = () => {
   const AboutImages = {
     Joali: "jb-arrival-jetty_cm8ri2",
     Emaar: "emaar-square-mall_cihdim",
-    bg: "06_qcvmdm",
   };
   return (
     <>
       <div
         className="w-full h-full rounded-3xl bg-cover bg-center custom-shadow mb-4 z-10 flex flex-col relative select-none"
-        style={{ backgroundImage: `url(${bg})` }}
+        style={{ backgroundImage: `url(${backgroundImages.about})` }}
       >
         <div className="w-full h-full bg-black opacity-45 absolute left-0 right-0"></div>
         <div className="flex flex-row h-full w-full justify-between px-4 sm:pr-24 sm:pl-24 relative">
@@ -43,7 +42,7 @@ const About = ({ cloudinaryUrl }) => {
             </a>
             <div className="flex w-full text-sm">
               <img
-                src={`${cloudinaryUrl}/${AboutImages.Joali}`}
+                src={`${backgroundImages.Joali}`}
                 alt="JoaliBeing_aerial"
                 className="w-56 flex "
               />
@@ -60,7 +59,7 @@ const About = ({ cloudinaryUrl }) => {
             </a>
             <div className="flex w-full text-sm pt-1">
               <img
-                src={`${cloudinaryUrl}/${AboutImages.Emaar}`}
+                src={`${backgroundImages.Emaar}`}
                 alt="Emaar_aerial"
                 className="w-56 flex "
               />
@@ -85,7 +84,8 @@ const About = ({ cloudinaryUrl }) => {
                 Why not to build 3D websites together?
               </p>
               <p className="flex w-full items-end text-end justify-end text-sm pt-8">
-                Eagerly growing <br/>understanding of :<br/> React
+                Eagerly growing <br />
+                understanding of :<br /> React
               </p>
               <p className="flex w-full items-end text-end justify-end text-sm pt-1">
                 React Three Fiber
@@ -106,7 +106,8 @@ const About = ({ cloudinaryUrl }) => {
                 AI
               </p>
               <p className="flex w-full items-end text-end justify-end text-sm pt-1">
-                And a curious mind <br/>to discover more...
+                And a curious mind <br />
+                to discover more...
               </p>
             </div>
           </div>

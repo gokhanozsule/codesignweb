@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
+import { models } from "@/constants";
 
 export function Torus(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF(`/models/Torus.glb`);
+  const { nodes, materials, animations } = useGLTF(models.Torus);
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
@@ -1164,5 +1165,3 @@ export function Torus(props) {
     </group>
   );
 }
-
-useGLTF.preload(`/models/Torus.glb`);

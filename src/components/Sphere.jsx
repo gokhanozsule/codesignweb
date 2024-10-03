@@ -1,8 +1,9 @@
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import { models } from "@/constants";
 
 export function Sphere01(props) {
-  const { nodes, materials } = useGLTF(`/models/Sphere.glb`);
+  const { nodes, materials } = useGLTF(models.Sphere);
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -116,5 +117,3 @@ export function Sphere01(props) {
     </group>
   );
 }
-
-useGLTF.preload(`/models/Sphere.glb`);
