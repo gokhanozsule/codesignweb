@@ -4,11 +4,11 @@ import { backgroundImages } from "@/constants";
 export default function AboutPage() {
   return (
     <div
-      className="w-full h-full rounded-3xl bg-cover bg-center custom-shadow mb-4 z-10 flex flex-col relative select-none"
+      className="w-full h-full rounded-3xl bg-cover bg-center custom-shadow flex flex-col relative select-none"
       style={{ backgroundImage: `url(${backgroundImages.about})` }}
     >
       <div className="w-full h-full bg-black opacity-45 absolute left-0 right-0"></div>
-      <div className="flex flex-row h-full w-full justify-between px-4 sm:pr-24 sm:pl-24 relative">
+      <div className="flex flex-row h-full w-full justify-between px-4 py-12 sm:pr-24 sm:pl-24 relative">
         <div className="flex flex-col h-full justify-start items-center text-start w-full text-white">
           <div className="flex w-full text-xs pt-12 ">GOKHAN OZSULE</div>
           <div className="flex w-full text-2xl ">CoDeSiGn</div>
