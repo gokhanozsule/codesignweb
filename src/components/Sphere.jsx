@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
 import { models } from "@/constants";
+import { useGLTF } from "@react-three/drei";
+import React from "react";
 
 export function Sphere01(props) {
   const { nodes, materials } = useGLTF(models.Sphere);

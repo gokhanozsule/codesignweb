@@ -1,10 +1,10 @@
 import { models } from "@/constants";
 import { useGLTF } from "@react-three/drei";
-import React, { useRef } from "react";
+import { useRef } from "react";
 
 export function Man(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF(models.Man);
+  const { nodes } = useGLTF(models.Man);
 
   return (
     <group ref={group} {...props} dispose={null}>

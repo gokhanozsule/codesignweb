@@ -12,10 +12,6 @@ type CarouselProps = {
   slug: string;
 };
 
-type CarouselImagesDict = {
-  [key: string]: CarouselImage[];
-};
-
 export const Carousel: React.FC<CarouselProps> = ({ slug }) => {
   const imgs = carouselImages[slug] || [];
   const [imgIndex, setImageIndex] = useState(0);

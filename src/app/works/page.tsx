@@ -14,7 +14,7 @@ export default function Works() {
       <div className="w-full h-full bg-black rounded-3xl opacity-55 absolute left-0 right-0 pointer-events-none" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 h-full w-full">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <ProjectCard
             key={project.slug}
             slug={project.slug}

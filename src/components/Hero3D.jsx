@@ -10,7 +10,7 @@ import {
   useGLTF,
 } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { DoubleSide } from "three";
 import { Man } from "./Man";
 import ProjectCard from "./ProjectCard";
@@ -20,10 +20,6 @@ export default function Hero3D(props) {
   const render02 = `${cloudinaryUrl}/Image01_a3wraq`;
   const render03 = `${cloudinaryUrl}/05_gtdpby`;
   const render04 = `${cloudinaryUrl}/03_nkgusl`;
-  const AboutImages = {
-    Joali: "jb-arrival-jetty_cm8ri2",
-    Emaar: "emaar-square-mall_cihdim",
-  };
 
   const group = useRef();
 
@@ -53,7 +49,7 @@ export default function Hero3D(props) {
     group.current.children[27].children[1].rotation.y += delta;
   });
 
-  const { nodes, materials } = useMemo(() => useGLTF(models.Hero3D));
+  const { nodes, materials } = useGLTF(models.Hero3D);
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
 

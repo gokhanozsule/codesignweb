@@ -4,12 +4,12 @@ import logo from "@/images/Codesign_Logo.png";
 import close from "@/images/icons8-close-64.png";
 import menu from "@/images/icons8-menu-50.png";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function Navbar() {
   const [isMenu, setIsMenu] = useState(false);
-  const pathname = usePathname(); // TODO: use pathname to highlight the current page in the navbar
+  // const pathname = usePathname(); // TODO: use pathname to highlight the current page in the navbar
 
   return (
     <div className="absolute w-full h-10 text-white flex justify-between border border-gray-400 items-center rounded-3xl z-30 custom-shadow">

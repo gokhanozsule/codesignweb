@@ -1,8 +1,3 @@
-import React from "react";
-import { Canvas } from "@react-three/fiber";
-import { Environment, OrbitControls } from "@react-three/drei";
-import { Cube01 } from "./Cube";
-
 const FooterWorks = () => {
   return (
     <div className="w-screen h-[24vh] custom-shadow flex flex-col items-center justify-center bg-[#202020] z-[100] ">

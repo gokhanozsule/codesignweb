@@ -1,6 +1,5 @@
-import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
 import { models } from "@/constants";
+import { useGLTF } from "@react-three/drei";
 
 export function Cube01(props) {
   const { nodes, materials } = useGLTF(models.Cube01);

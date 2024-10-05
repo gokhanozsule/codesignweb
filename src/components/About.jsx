@@ -5,10 +5,6 @@ import React from "react";
 import { Man } from "./Man";
 
 const About = () => {
-  const AboutImages = {
-    Joali: "jb-arrival-jetty_cm8ri2",
-    Emaar: "emaar-square-mall_cihdim",
-  };
   return (
     <>
       <div
