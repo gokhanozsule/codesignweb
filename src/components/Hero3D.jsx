@@ -14,8 +14,10 @@ import { useEffect, useRef, useState } from "react";
 import { DoubleSide } from "three";
 import { Man } from "./Man";
 import ProjectCard from "./ProjectCard";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 export default function Hero3D(props) {
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 640px)");
   const render01 = `${cloudinaryUrl}/01AnaPerspektif_binjqw`;
   const render02 = `${cloudinaryUrl}/Image01_a3wraq`;
   const render03 = `${cloudinaryUrl}/05_gtdpby`;
@@ -50,16 +52,6 @@ export default function Hero3D(props) {
   });
 
   const { nodes, materials } = useGLTF(models.Hero3D);
-
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 640);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <>
@@ -1161,7 +1153,7 @@ export default function Hero3D(props) {
             />
           </mesh>
           {hoveredWorks && (
-            <Html position={/* isMobile ? [2, 1, 0] :  */ [2.75, 2.5, 0.25]}>
+            <Html position={isSmallDevice ? [2, 1, 0] : [2.75, 2.5, 0.25]}>
               <div className="bg-slate-700/75 text-white border border-white px-2 p-1 rounded-full cursor-pointer">
                 Works
               </div>
@@ -2475,7 +2467,7 @@ export default function Hero3D(props) {
         url={logo.src}
         scale={0.75}
         color="white"
-        position={isMobile ? [0.235, 2.25, 2.7] : [0.235, 2.5, 3.75]}
+        position={isSmallDevice ? [0.235, 2.25, 2.7] : [0.235, 2.5, 3.75]}
         rotation={[0, Math.PI / 2, 0]}
         side={DoubleSide}
       />

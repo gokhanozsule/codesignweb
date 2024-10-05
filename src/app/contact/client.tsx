@@ -1,22 +1,13 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
-import { Environment, OrbitControls } from "@react-three/drei";
 import { Contact3D } from "@/components/Contact3D";
 import { backgroundImages } from "@/constants";
+import { Environment, OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 export default function ContactPage() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 640);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 640px)");
 
   return (
     <div
@@ -52,7 +43,7 @@ export default function ContactPage() {
             <Environment preset="warehouse" environmentIntensity={1.25} />
             <Contact3D
               position={[0, -0.75, 0]}
-              scale={isMobile ? 0.65 : 1.25}
+              scale={isSmallDevice ? 0.65 : 1.25}
             />
           </Canvas>
         </div>

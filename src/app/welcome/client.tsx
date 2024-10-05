@@ -4,20 +4,10 @@ import Hero3D from "@/components/Hero3D";
 import logo from "@/images/Codesign_Logo_Inv 1.svg";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { useEffect, useState } from "react";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 export default function Welcome() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 640);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // console.log(isMobile);
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 640px)");
   return (
     <>
       <div className="w-full h-full rounded-3xl bg-cover bg-center custom-shadow z-10 flex flex-col relative">
@@ -29,7 +19,7 @@ export default function Welcome() {
         >
           <Canvas
             camera={{
-              position: /* isMobile ? [4, 2, 1] :  */ [11, 2, 9],
+              position: isSmallDevice ? [4, 2, 1] : [11, 2, 9],
               fov: 50,
             }}
             dpr={[1.25, 1.5]}
@@ -97,8 +87,8 @@ export default function Welcome() {
             />
             <Environment preset="warehouse" environmentIntensity={0.5} />
             <Hero3D
-              position={isMobile ? [0, 0, 1] : [0, -1.5, 1]}
-              scale={isMobile ? 0.75 : 1.25}
+              position={isSmallDevice ? [0, 0, 1] : [0, -1.5, 1]}
+              scale={isSmallDevice ? 0.75 : 1.25}
             />
           </Canvas>
         </div>
