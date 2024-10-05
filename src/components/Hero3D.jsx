@@ -1,3 +1,7 @@
+"use client";
+
+import { backgroundImages, cloudinaryUrl, models } from "@/constants";
+import logo from "@/images/Codesign_Logo_Inv 1.svg";
 import {
   Environment,
   Html,
@@ -6,24 +10,18 @@ import {
   useGLTF,
 } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { DoubleSide } from "three";
-import logo from "../assets/images/Codesign_Logo_Inv 1.svg";
 import { Man } from "./Man";
 import ProjectCard from "./ProjectCard";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
-export function Hero3D({ cloudinaryUrl, ...props }) {
-  const bg = `${cloudinaryUrl}/08_ujpych`;
-  const bg01 = `${cloudinaryUrl}/06_qcvmdm`;
+export default function Hero3D(props) {
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 640px)");
   const render01 = `${cloudinaryUrl}/01AnaPerspektif_binjqw`;
   const render02 = `${cloudinaryUrl}/Image01_a3wraq`;
   const render03 = `${cloudinaryUrl}/05_gtdpby`;
   const render04 = `${cloudinaryUrl}/03_nkgusl`;
-  const AboutImages = {
-    Joali: "jb-arrival-jetty_cm8ri2",
-    Emaar: "emaar-square-mall_cihdim",
-    bg01: "06_qcvmdm",
-  };
 
   const group = useRef();
 
@@ -53,18 +51,7 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
     group.current.children[27].children[1].rotation.y += delta;
   });
 
-  const { nodes, materials } = useMemo(() => useGLTF(`/models/Hero3D.glb`));
-
-  
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
-  
-  useEffect(() =>{
-    const handleResize = () =>{
-      setIsMobile(window.innerWidth < 640);
-    }
-  window.addEventListener('resize', handleResize);
-  return () => window.removeEventListener('resize', handleResize);
-  },[]); 
+  const { nodes, materials } = useGLTF(models.Hero3D);
 
   return (
     <>
@@ -873,7 +860,7 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
             >
               <div
                 className="h-[65%] rounded-3xl z-20 border mb-16 bg-cover bg-center w-[75%] flex flex-col -translate-x-[8%] sm:-translate-y-[25%] "
-                style={{ backgroundImage: `url(${bg})` }}
+                style={{ backgroundImage: `url(${backgroundImages.works})` }}
               >
                 <div className="w-full h-full z-20 bg-black opacity-70 absolute rounded-3xl left-0 right-0"></div>
                 <button
@@ -979,7 +966,7 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
               <>
                 <div
                   className="w-[95%] h-[95%] rounded-3xl border border-white bg-cover bg-center custom-shadow mb-4 z-10 flex flex-col relative select-none translate-x-[12%] sm:translate-x-[5%] sm:-translate-y-[10%]"
-                  style={{ backgroundImage: `url(${bg01})` }}
+                  style={{ backgroundImage: `url(${backgroundImages.about})` }}
                 >
                   <div className="w-full h-full bg-black opacity-45 absolute left-0 right-0 rounded-3xl"></div>
                   <button
@@ -1023,7 +1010,7 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
                       </a>
                       <div className="flex w-full text-xs lg:text-sm">
                         <img
-                          src={`${cloudinaryUrl}/${AboutImages.Joali}`}
+                          src={`${backgroundImages.Joali}`}
                           alt="JoaliBeing_aerial"
                           className="w-56 flex "
                         />
@@ -1040,7 +1027,7 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
                       </a>
                       <div className="flex w-full text-xs lg:text-sm pt-1">
                         <img
-                          src={`${cloudinaryUrl}/${AboutImages.Emaar}`}
+                          src={`${backgroundImages.Emaar}`}
                           alt="Emaar_aerial"
                           className="w-56 flex "
                         />
@@ -1166,7 +1153,7 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
             />
           </mesh>
           {hoveredWorks && (
-            <Html position={/* isMobile ? [2, 1, 0] :  */[2.75, 2.5, 0.25]}>
+            <Html position={isSmallDevice ? [2, 1, 0] : [2.75, 2.5, 0.25]}>
               <div className="bg-slate-700/75 text-white border border-white px-2 p-1 rounded-full cursor-pointer">
                 Works
               </div>
@@ -1178,7 +1165,10 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
           <Html fullscreen>
             <div
               className="w-[90%] h-[97%] rounded-3xl bg-cover bg-center custom-shadow z-10 flex flex-col relative translate-x-14 sm:translate-x-28 sm:-translate-y-[75px] select-none"
-              style={{ backgroundImage: `url(${bg})`, borderRadius: "24 px" }}
+              style={{
+                backgroundImage: `url(${backgroundImages.works})`,
+                borderRadius: "24 px",
+              }}
             >
               <div className="w-full h-full bg-black rounded-3xl opacity-55 absolute left-0 right-0"></div>
               <button
@@ -2474,14 +2464,13 @@ export function Hero3D({ cloudinaryUrl, ...props }) {
         </mesh>
       </group>
       <Image
-        url={logo}
+        url={logo.src}
         scale={0.75}
         color="white"
-        position={isMobile ? [0.235,2.25,2.7] : [0.235, 2.5, 3.75]}
+        position={isSmallDevice ? [0.235, 2.25, 2.7] : [0.235, 2.5, 3.75]}
         rotation={[0, Math.PI / 2, 0]}
         side={DoubleSide}
       />
     </>
   );
 }
-useGLTF.preload(`/models/Hero3D.glb`);

@@ -1,13 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
+"use client";
+
+import { backgroundImages, models } from "@/constants";
+import logo from "@/images/Codesign_Logo_Inv.png";
 import { Html, Image, Outlines, Text, useGLTF } from "@react-three/drei";
-import { DoubleSide } from "three";
 import { useFrame } from "@react-three/fiber";
+import { useMediaQuery } from "@uidotdev/usehooks";
+import { useRef, useState } from "react";
+import { DoubleSide } from "three";
 import Blop from "./Blop";
-import logo from "../assets/images/Codesign_Logo_Inv.png";
 
 export function Contact3D(props) {
-  const bg = "https://res.cloudinary.com/doeucuf7e/image/upload/07_zzchd2";
-  const { nodes, materials } = useGLTF(`/models/Contact3D.glb`);
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 640px)");
+  const { nodes, materials } = useGLTF(models.Contact3D);
   const colorHex = ["#212226", "#54532D", "#5E4035", "#242F45"];
   const group = useRef();
 
@@ -42,16 +46,6 @@ export function Contact3D(props) {
   const handleColorGray = () => {
     setHexNum(0);
   };
-
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
-  
-  useEffect(() =>{
-    const handleResize = () =>{
-      setIsMobile(window.innerWidth < 640);
-    }
-  window.addEventListener('resize', handleResize);
-  return () => window.removeEventListener('resize', handleResize);
-  },[]); 
 
   return (
     <>
@@ -125,7 +119,7 @@ export function Contact3D(props) {
             >
               <div
                 className="h-[5%] sm:h-[8%] rounded-full z-20 border mb-16 bg-cover bg-center w-[95%] flex flex-col relative "
-                style={{ backgroundImage: `url(${bg})` }}
+                style={{ backgroundImage: `url(${backgroundImages.contact})` }}
               >
                 <div className="w-full h-full z-20 bg-black opacity-75 absolute rounded-full left-0 right-0"></div>
                 <div className="flex h-full w-full flex-col mt-1 text-white z-30">
@@ -232,7 +226,7 @@ export function Contact3D(props) {
           >
             <div
               className="h-[80%] rounded-3xl border mb-16 bg-cover bg-center w-[75%] flex flex-col relative select-none"
-              style={{ backgroundImage: `url(${bg})` }}
+              style={{ backgroundImage: `url(${backgroundImages.contact})` }}
             >
               <div className="w-full h-full bg-black opacity-70 absolute rounded-3xl left-0 right-0 "></div>
               <button
@@ -422,55 +416,61 @@ export function Contact3D(props) {
           </group>
         </group>
       </group>
-      <Blop position={isMobile ? [0.22, -0.1, -1] : [0.22, 0.4, -2.1]} scale={isMobile ? 0.175 : 0.35} />
-      <Text position={isMobile ? [-0.75, 0.1, -1.2] : [-1.4, 0.8, -2.32]} scale={isMobile ? 0.15 : 0.3}>
+      <Blop
+        position={isSmallDevice ? [0.22, -0.1, -1] : [0.22, 0.4, -2.1]}
+        scale={isSmallDevice ? 0.175 : 0.35}
+      />
+      <Text
+        position={isSmallDevice ? [-0.75, 0.1, -1.2] : [-1.4, 0.8, -2.32]}
+        scale={isSmallDevice ? 0.15 : 0.3}
+      >
         3D Web
       </Text>
       <Text
-        position={isMobile ? [-1.25, 0.4, 0.95] : [-2.6, 1.4, 1.9]}
-        scale={isMobile ? 0.075 : 0.12}
+        position={isSmallDevice ? [-1.25, 0.4, 0.95] : [-2.6, 1.4, 1.9]}
+        scale={isSmallDevice ? 0.075 : 0.12}
         rotation={[0, Math.PI / 2, 0]}
       >
         Architecture
       </Text>
       <Text
-        position={isMobile ? [-1.25, 0.25, 0.95] : [-2.6, 1.15, 1.9]}
-        scale={isMobile ? 0.075 : 0.12}
+        position={isSmallDevice ? [-1.25, 0.25, 0.95] : [-2.6, 1.15, 1.9]}
+        scale={isSmallDevice ? 0.075 : 0.12}
         rotation={[0, Math.PI / 2, 0]}
       >
         BIM Modeling
       </Text>
       <Text
-        position={isMobile ? [-1.25, 0.4, 0.35] : [-2.5, 1.4, 0.65]}
-        scale={isMobile ? 0.075 : 0.12}
+        position={isSmallDevice ? [-1.25, 0.4, 0.35] : [-2.5, 1.4, 0.65]}
+        scale={isSmallDevice ? 0.075 : 0.12}
         rotation={[0, Math.PI / 2, 0]}
       >
         Interior Design
       </Text>
       <Text
-        position={isMobile ? [-1.175, 0.15, -0.4] : [-2.3, 0.9, -0.8]}
-        scale={isMobile ? 0.125 : 0.2}
+        position={isSmallDevice ? [-1.175, 0.15, -0.4] : [-2.3, 0.9, -0.8]}
+        scale={isSmallDevice ? 0.125 : 0.2}
         rotation={[0, Math.PI / 2, 0]}
       >
         Visualisation
       </Text>
       <Image
-        url={logo}
-        scale={isMobile ? 0.35 : 0.5}
+        url={logo.src}
+        scale={isSmallDevice ? 0.35 : 0.5}
         color="white"
-        position={isMobile ? [1, 0.25, -1.25] : [2, 0.9, -2.4]}
+        position={isSmallDevice ? [1, 0.25, -1.25] : [2, 0.9, -2.4]}
         side={DoubleSide}
       />
       <Text
-        position={isMobile ? [1.22, -0.592, 0.055] : [2.35, -0.44, 0.1]}
-        scale={isMobile ? 0.125 : 0.15}
+        position={isSmallDevice ? [1.22, -0.592, 0.055] : [2.35, -0.44, 0.1]}
+        scale={isSmallDevice ? 0.125 : 0.15}
         rotation={[-Math.PI / 2, 0, Math.PI / 2]}
       >
         Change UI colors
       </Text>
       <Text
-        position={isMobile ? [0.9, -0.4, -0.71] : [1.7, -0.08, -1.37]}
-        scale={isMobile ? 0.09 : 0.15}
+        position={isSmallDevice ? [0.9, -0.4, -0.71] : [1.7, -0.08, -1.37]}
+        scale={isSmallDevice ? 0.09 : 0.15}
         rotation={[-Math.PI / 2, 0, Math.PI / 2]}
         color={"black"}
       >
@@ -479,4 +479,3 @@ export function Contact3D(props) {
     </>
   );
 }
-useGLTF.preload(`/models/Contact3D.glb`);

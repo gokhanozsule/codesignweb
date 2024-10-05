@@ -1,12 +1,13 @@
-import React, { useEffect, useRef } from "react";
-import { useGLTF, useAnimations, Html, Text } from "@react-three/drei";
-import { Scene } from "three";
-import * as THREE from "three";
+"use client";
+
+import { useAnimations, useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
+import { useEffect, useRef } from "react";
+import { models } from "@/constants";
 
 export function Torus01(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF(`/models/Torus01.glb`);
+  const { nodes, materials, animations } = useGLTF(models.Torus01);
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
@@ -1314,5 +1315,3 @@ export function Torus01(props) {
     </group>
   );
 }
-
-useGLTF.preload(`/models/Torus01.glb`);

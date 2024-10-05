@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import { models } from "@/constants";
 import { useGLTF } from "@react-three/drei";
+import { useRef } from "react";
 
 export function Man(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF(`/models/Man.glb`);
+  const { nodes } = useGLTF(models.Man);
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -18,5 +19,3 @@ export function Man(props) {
     </group>
   );
 }
-
-useGLTF.preload(`/models/Man.glb`);
