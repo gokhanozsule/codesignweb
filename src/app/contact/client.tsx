@@ -14,8 +14,8 @@ export default function ContactPage() {
       setIsMobile(window.innerWidth < 640);
     };
     handleResize();
-    window?.addEventListener("resize", handleResize);
-    return () => window?.removeEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
