@@ -1,6 +1,11 @@
 import React from "react";
 import { backgroundImages } from "@/constants";
-import ContactClientComponent from "@/app/contact/client";
+import dynamic from "next/dynamic";
+// import ContactClientComponent from "@/app/contact/client";
+
+const ContactClientComponent = dynamic(() => import("@/app/contact/client"), {
+  ssr: false,
+});
 
 export default function ContactPage() {
   return (

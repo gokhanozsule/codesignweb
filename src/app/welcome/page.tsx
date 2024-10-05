@@ -1,5 +1,10 @@
+import dynamic from "next/dynamic";
 import React from "react";
-import WelcomeClientComponent from "@/app/welcome/client";
+// import WelcomeClientComponent from "@/app/welcome/client";
+
+const WelcomeClientComponent = dynamic(() => import("@/app/welcome/client"), {
+  ssr: false,
+});
 
 export default function WelcomePage() {
   return (
