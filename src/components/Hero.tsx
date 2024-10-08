@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
     >
       <div className="w-full h-full bg-black rounded-3xl opacity-55 absolute left-0 right-0 pointer-events-none" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-1 h-full w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-1 h-full w-full select-none ">
         <div className="grid grid-cols-1 gap-1 h-full w-full justify-items-center">
           <ProjectCard
             slug="mixed-use"
@@ -43,8 +43,8 @@ const Hero: React.FC = () => {
             src={`${cloudinaryUrl}/Image01_a3wraq`}
           />
         </div>
-        <div className="relative flex flex-col justify-between items-center text-center rounded-3xl custom-shadow">
-          <div className="w-full mt-11 h-10 bg-[#504f51] rounded-3xl flex items-center justify-end pr-4 border border-white text-white">
+        <div className="relative flex flex-col justify-between items-center text-center rounded-3xl custom-shadow max-h-full">
+          <div className="w-full h-10 bg-[#504f51] rounded-3xl flex items-center justify-end pr-4 border border-white text-white">
             3D Web
           </div>
           <div className="h-[65%] sm:h-[70%] sm:bottom-[35%] w-full flex justify-center items-end z-0 cursor-grab">
@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
           <div className="text-white z-10 mb-8 text-3xl pointer-events-none flex absolute top-[37.5%]">
             &harr;
           </div>
-          <div className="text-white text-sm sm:text-[16px] mt-2 mb-4 sm:mb-24 flex flex-col items-center">
+          <div className="text-white text-sm sm:text-[16px] mt-2 mb-4 sm:mb-10 flex flex-col items-center">
             <p>For a better journey through a website,</p>
             <p>3D interactions are fun to have..</p>
             <p>Drag the &harr; sign / Check Interactive Model for more...</p>
