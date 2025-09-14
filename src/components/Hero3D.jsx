@@ -872,7 +872,7 @@ export default function Hero3D(props) {
                   X
                 </button>
                 <div className="flex h-full w-full flex-col text-white z-30">
-                  <div className="mt-20 text-base lg:text-xl">
+                  <div className="mt-[20%] text-base lg:text-xl justify-center items-center text-center">
                     Contact below for an exciting project idea
                   </div>
                   <div className="flex justify-center w-full mt-4 ">
@@ -882,7 +882,7 @@ export default function Hero3D(props) {
                     +90 534 887 1868
                   </div>
                   <a
-                    className="text-white hover:text-orange-400"
+                    className="text-white hover:text-orange-400 justify-center items-center text-center"
                     href="mailto:codesign@gmail.com"
                   >
                     codesign.gokhanozsule@gmail.com
