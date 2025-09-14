@@ -37,7 +37,7 @@ export default function AboutPage() {
             <img
               src={`${backgroundImages.Joali}`}
               alt="JoaliBeing_aerial"
-              className="w-56 lg:w-[65%] rounded-3xl flex "
+              className="w-56 lg:w-[50%] rounded-3xl flex "
             />
           </div>
           <div className="flex w-full text-sm pt-1 text-red-400">
@@ -55,7 +55,7 @@ export default function AboutPage() {
             <img
               src={`${backgroundImages.Emaar}`}
               alt="Emaar_aerial"
-              className="w-56 lg:w-[65%] rounded-3xl flex "
+              className="w-56 lg:w-[50%] rounded-3xl flex "
             />
           </div>
         </div>
