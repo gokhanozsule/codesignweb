@@ -1186,9 +1186,9 @@ export default function Hero3D(props) {
                       <a
                         href="/MixedUse"
                         alt="Mixed Use"
-                        className="w-[60%] rounded-3xl custom-shadow opacity-90 
+                        className="w-[60%] sm:w-[75%] h-[70%] rounded-3xl custom-shadow opacity-90 
                         hover:opacity-100 hover:scale-[1.02] hover:border-[2px] hover:border-[#e5e4e2] transition-all cursor-pointer relative"
-                      >
+                      > 
                         <ProjectCard
                           text={"MIXED USE DEVELOPMENT"}
                           src={render01}
@@ -1200,7 +1200,7 @@ export default function Hero3D(props) {
                       <a
                         href="/V01"
                         alt="V01"
-                        className="w-[60%] rounded-3xl custom-shadow opacity-90 
+                        className="w-[60%] sm:w-[75%] h-[70%] rounded-3xl custom-shadow opacity-90 
                         hover:opacity-100 hover:scale-[1.02] hover:border-[2px] hover:border-[#e5e4e2] transition-all cursor-pointer relative"
                       >
                         <ProjectCard text={"PRIVATE VILLA"} src={render02} />
@@ -1213,7 +1213,7 @@ export default function Hero3D(props) {
                       <a
                         href="/V02"
                         alt="V02"
-                        className="w-[60%] rounded-3xl custom-shadow opacity-90 
+                        className="w-[60%] sm:w-[75%] h-[70%] rounded-3xl custom-shadow opacity-90 
                         hover:opacity-100 hover:scale-[1.02] hover:border-[2px] hover:border-[#e5e4e2] transition-all cursor-pointer relative"
                       >
                         <ProjectCard text={"VILLA 02"} src={render03} />
@@ -1224,7 +1224,7 @@ export default function Hero3D(props) {
                       <a
                         href="/Carport"
                         alt="Carport"
-                        className="w-[60%] rounded-3xl custom-shadow opacity-90 
+                        className="w-[60%] sm:w-[75%] h-[70%] rounded-3xl custom-shadow opacity-90 
                         hover:opacity-100 hover:scale-[1.02] hover:border-[2px] hover:border-[#e5e4e2] transition-all cursor-pointer relative"
                       >
                         <ProjectCard text={"CARPORT"} src={render04} />
