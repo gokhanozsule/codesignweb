@@ -5,7 +5,7 @@ const ProjectCard = ({ text, src, year, slug = "" }) => {
   const content = (
     <>
       <img src={src} className="w-full rounded-3xl custom-shadow " />
-      <div className="absolute left-0 bottom-[20%] w-full h-10 bg-slate-200/70 flex text-center items-center justify-center">
+      <div className="absolute left-0 bottom-[15%] w-full h-10 bg-slate-200/70 flex text-center items-center justify-center text-black">
         {text}
       </div>
     </>
