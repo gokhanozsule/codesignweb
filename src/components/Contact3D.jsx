@@ -129,10 +129,10 @@ export function Contact3D(props) {
                   >
                     X
                   </button>
-                  <div className="text-xs sm:text-base lg:text-xl -translate-y-[28px] sm:-translate-y-10">
+                  <div className="text-xs sm:text-base lg:text-xl -translate-y-[27px] sm:-translate-y-7 translate-x-16 sm:translate-x-[30%] justify-center items-center">
                     Welcome to a new 3D aproach where the aim is :
                   </div>
-                  <div className="mt-2 text-xs sm:text-base lg:text-xl -translate-y-[37px] sm:-translate-y-12">
+                  <div className="mt-2 text-xs sm:text-base lg:text-xl -translate-y-[37px] sm:-translate-y-7 translate-x-16 sm:translate-x-[30%]">
                     Coding for Design, Designing for everyone
                   </div>
                 </div>
@@ -238,7 +238,7 @@ export function Contact3D(props) {
                 X
               </button>
               <div className="flex h-full w-full flex-col text-white z-30">
-                <div className="mt-20 text-xl">
+                <div className="mt-[25%] text-xl justify-center items-center text-center">
                   Contact below for an exciting project idea
                 </div>
                 <div className="flex justify-center w-full mt-4 ">
@@ -248,7 +248,7 @@ export function Contact3D(props) {
                   +90 534 887 1868
                 </div>
                 <a
-                  className="text-white hover:text-orange-400"
+                  className="text-white hover:text-orange-400 justify-center items-center text-center"
                   href="mailto:codesign@gmail.com"
                 >
                   codesign.gokhanozsule@gmail.com
