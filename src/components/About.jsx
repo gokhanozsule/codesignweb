@@ -1,10 +1,12 @@
+
+
 import { backgroundImages } from "@/constants";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React from "react";
 import { Man } from "./Man";
 
-const About = () => {
+const About = () =>{
   return (
     <>
       <div
