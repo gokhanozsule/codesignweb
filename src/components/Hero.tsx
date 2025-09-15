@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
           <div className="w-full mt-11 h-10 bg-[#504f51] rounded-3xl flex items-center justify-end pr-4 border border-white text-white">
             3D Web
           </div>
-          <div className="h-[65%] sm:h-[70%] sm:bottom-[35%] w-full flex justify-center items-end z-0 cursor-grab">
+          <div className="h-[70%] sm:h-[60%] sm:bottom-[35%] w-full flex justify-center items-end z-0 cursor-grab">
             <Canvas
               camera={{ position: [0, 0, 6] }}
               dpr={[1.5, 2]}

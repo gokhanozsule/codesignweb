@@ -29,7 +29,7 @@ export default function AboutPage() {
             href="https://www.joali.com/joali-being/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex w-full text-sm text-red-400"
+            className="flex w-full text-sm text-red-400 hover:text-orange-300"
           >
             Joali Being Maldives / 4 years
           </a>
@@ -37,17 +37,17 @@ export default function AboutPage() {
             <img
               src={`${backgroundImages.Joali}`}
               alt="JoaliBeing_aerial"
-              className="w-56 lg:w-[50%] rounded-3xl flex "
+              className="w-56 lg:w-[40%] rounded-3xl flex "
             />
           </div>
-          <div className="flex w-full text-sm pt-1 text-red-400">
+          <div className="flex w-full text-sm pt-1 text-red-400 ">
             Design Lead and Construction Consultant for
           </div>
           <a
             href="https://www.emaarsquaremall.com/en/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex w-full text-sm text-red-400"
+            className="flex w-full text-sm text-red-400 hover:text-orange-300"
           >
             EmaarSquare Istanbul / 6 years
           </a>
@@ -55,7 +55,7 @@ export default function AboutPage() {
             <img
               src={`${backgroundImages.Emaar}`}
               alt="Emaar_aerial"
-              className="w-56 lg:w-[50%] rounded-3xl flex "
+              className="w-56 lg:w-[40%] rounded-3xl flex "
             />
           </div>
         </div>

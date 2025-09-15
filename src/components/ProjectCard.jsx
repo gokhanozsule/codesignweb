@@ -18,7 +18,7 @@ const ProjectCard = ({ text, src, year, slug = "" }) => {
   return (
     <div className="w-full h-full flex flex-col justify-center items-center text-center border rounded-3xl border-white">
       <Link
-        className="max-w-[80%] max-h-[85%] rounded-3xl custom-shadow opacity-90 text-[12px] sm:text-lg
+        className="max-w-[55%] max-h-full rounded-3xl custom-shadow opacity-90 text-[12px] sm:text-lg
       hover:opacity-100 hover:scale-[1.02] hover:border-[2px] hover:border-[#e5e4e2] transition-all cursor-pointer relative"
         href={`works/${slug}`}
       >

@@ -115,10 +115,10 @@ export function Contact3D(props) {
             <Html
               as="div"
               fullscreen
-              className="flex flex-col justify-end mt-[-760px] items-center rounded-3xl cursor-default select-none"
+              className="flex flex-col justify-end mt-[-100px] items-center rounded-3xl cursor-default select-none"
             >
               <div
-                className="h-[5%] sm:h-[8%] rounded-full z-20 border mb-16 bg-cover bg-center w-[95%] flex flex-col relative "
+                className="h-[5%] sm:h-[12%] rounded-full z-20 border mb-16 bg-cover bg-center w-[95%] flex flex-col relative "
                 style={{ backgroundImage: `url(${backgroundImages.contact})` }}
               >
                 <div className="w-full h-full z-20 bg-black opacity-75 absolute rounded-full left-0 right-0"></div>
