@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${roboto.className} antialiased`}>
         <Navbar />
-        <main className="w-full h-[80%] lg:h-screen">{children}</main>
+        <main className="w-full h-screen">{children}</main>
       </body>
     </html>
   );
