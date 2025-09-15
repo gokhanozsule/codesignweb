@@ -872,7 +872,7 @@ export default function Hero3D(props) {
                   X
                 </button>
                 <div className="flex h-full w-full flex-col text-white z-30">
-                  <div className="mt-[20%] text-base lg:text-xl justify-center items-center text-center">
+                  <div className="mt-[16%] text-base lg:text-xl justify-center items-center text-center">
                     Contact below for an exciting project idea
                   </div>
                   <div className="flex justify-center w-full mt-4 ">
@@ -1004,7 +1004,7 @@ export default function Hero3D(props) {
                       <a
                         href="https://www.joali.com/joali-being/"
                         target="_blank"
-                        className="flex w-full text-xs lg:text-sm text-red-400"
+                        className="flex w-full text-xs lg:text-sm text-red-400 hover:text-orange-300"
                       >
                         Joali Being Maldives / 4 years
                       </a>
@@ -1012,7 +1012,7 @@ export default function Hero3D(props) {
                         <img
                           src={`${backgroundImages.Joali}`}
                           alt="JoaliBeing_aerial"
-                          className="w-56 lg:w-[50%] rounded-3xl flex "
+                          className="w-56 lg:w-[40%] rounded-3xl flex "
                         />
                       </div>
                       <div className="flex w-full text-xs lg:text-sm pt-1 text-red-400">
@@ -1021,7 +1021,7 @@ export default function Hero3D(props) {
                       <a
                         href="https://www.emaarsquaremall.com/en/"
                         target="_blank"
-                        className="flex w-full text-xs lg:text-sm text-red-400"
+                        className="flex w-full text-xs lg:text-sm text-red-400 hover:text-orange-300"
                       >
                         EmaarSquare Istanbul / 6 years
                       </a>
@@ -1029,7 +1029,7 @@ export default function Hero3D(props) {
                         <img
                           src={`${backgroundImages.Emaar}`}
                           alt="Emaar_aerial"
-                          className="w-56 lg:w-[50%] rounded-3xl flex "
+                          className="w-56 lg:w-[40%] rounded-3xl flex "
                         />
                       </div>
                     </div>
