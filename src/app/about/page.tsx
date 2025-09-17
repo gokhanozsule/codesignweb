@@ -66,16 +66,16 @@ export default function AboutPage() {
               Every idea starts with a model
             </p>
             <p className="flex w-full items-end text-end justify-end text-sm pt-1">
-              3D AR/VR experiences are gradually developing
+              We are heading towards a digital future
             </p>
             <p className="flex w-full items-end text-end justify-end text-sm pt-1">
-              Designing a web flow in 3D is exciting
+              Designing a web flow in 3D is more functional
             </p>
             <p className="flex w-full items-end text-end justify-end text-sm pt-1">
               3D web ui offers more creative interactions
             </p>
             <p className="flex w-full items-end text-end justify-end text-base pt-8">
-              Why not to build 3D websites together?
+              Let's build something inspiring!
             </p>
             <p className="flex w-full items-end text-end justify-end text-sm pt-8">
               Eagerly growing <br />
