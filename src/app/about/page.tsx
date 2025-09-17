@@ -75,7 +75,7 @@ export default function AboutPage() {
               3D web ui offers more creative interactions
             </p>
             <p className="flex w-full items-end text-end justify-end text-base pt-8">
-              Let's build something inspiring!
+              Let us build something inspiring!
             </p>
             <p className="flex w-full items-end text-end justify-end text-sm pt-8">
               Eagerly growing <br />

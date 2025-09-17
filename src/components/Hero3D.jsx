@@ -1049,7 +1049,7 @@ export default function Hero3D(props) {
                           3D web ui offers more creative interactions
                         </p>
                         <p className="flex w-full items-end text-end justify-end text-sm lg:text-base pt-8">
-                          Let's build something inspiring!
+                          Let us build something inspiring!
                         </p>
                         <p className="flex w-full items-end text-end justify-end text-sm lg:text-base pt-8">
                           Eagerly growing understanding of : React
