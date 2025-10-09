@@ -2,12 +2,21 @@
 
 import Hero3D from "@/components/Hero3D";
 import logo from "@/images/Codesign_Logo_Inv 1.svg";
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Environment, OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "@uidotdev/usehooks";
+import { useEffect } from "react";
+import { models } from "@/constants";
 
 export default function Welcome() {
   const isSmallDevice = useMediaQuery("only screen and (max-width : 640px)");
+  useEffect(() => {
+    // Preload heavy GLB and warm the JS chunk for Hero3D
+    try {
+      useGLTF.preload(models.Hero3D);
+    } catch {}
+    import("@/components/Hero3D");
+  }, []);
   return (
     <>
       <div className="w-full h-full rounded-3xl bg-cover bg-center custom-shadow z-10 flex flex-col relative">
@@ -26,6 +35,7 @@ export default function Welcome() {
             linear
             shadows
           >
+            <Preload all />
             <OrbitControls
               enablePan={false}
               enableZoom={false}
