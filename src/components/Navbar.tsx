@@ -35,7 +35,7 @@ export default function Navbar() {
 
   return (
     <div className="absolute w-full h-10 text-white flex justify-between border border-gray-400 items-center rounded-3xl z-30 custom-shadow">
-      <NavLink href="welcome">
+      <NavLink href="/welcome">
         <span className="flex justify-center items-center text-sm sm:text-base gap-4 hover:scale-90 hover:pl-[2px] ml-0 origin-left transition-all">
           <img
             src={logo.src}

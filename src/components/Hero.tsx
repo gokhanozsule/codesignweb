@@ -1,11 +1,12 @@
 "use client";
 
 import { backgroundImages, cloudinaryUrl } from "@/constants";
-import { Environment, OrbitControls, Text } from "@react-three/drei";
+import { Environment, OrbitControls, Text, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import React from "react";
+import React, { useEffect } from "react";
 import ProjectCard from "./ProjectCard";
 import { Torus01 } from "./Torus01";
+import { models } from "@/constants";
 
 // const ProjectCard: React.FC<ProjectCardProps> = ({ href, text, src }) => (
 //   <Link href={href} className="relative w-full h-48 rounded-lg overflow-hidden">
@@ -17,6 +18,13 @@ import { Torus01 } from "./Torus01";
 // );
 
 const Hero: React.FC = () => {
+  useEffect(() => {
+    // Preload the heavy Hero3D GLB and warm its JS chunk for faster navigation
+    try {
+      useGLTF.preload(models.Hero3D);
+    } catch {}
+    import("@/components/Hero3D");
+  }, []);
   return (
     <div
       className="w-full h-full rounded-3xl bg-cover bg-center custom-shadow z-10 flex flex-col relative"
